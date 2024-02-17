@@ -1,0 +1,24 @@
+@use "./colors" as *;
+@use "./reset" as *;
+
+.btn{
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-primary {
+    background-color: $btncolor!important;
+    color: $btntextcolor;
+    border: none !important;
+  }
+
+  .btn-secondary {
+   color: $btncolor!important;
+    background-color: $btntextcolor !important;
+    border: none !important;
+  }
+
+ .navbar-toggler-collapsed, .navbar-toggler-icon{
+    color: #fff !important;
+    fill: #fff !important;
+  }
