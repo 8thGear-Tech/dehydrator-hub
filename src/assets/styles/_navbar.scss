@@ -1,0 +1,50 @@
+.guest-navbar{
+    .nav-link{
+        color: #fff ;
+        font-size: 16px;
+        font-family: 'Poppins';
+       
+    }
+    
+    
+    
+    .nav-link:hover, .active{
+        border-bottom: 1px solid #ffffff !important;
+        color: #fff !important;
+        border-radius: none !important;
+        
+      }
+}
+
+
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+ 
+   
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .sidebar, .service-bar{
+    .nav-link{
+      color:#000000;
+      font-size: 16px;
+      font-family: 'Poppins';
+     
+  }
+  
+  .nav-link:hover,.active{
+      background-color: #E5F1FF;
+      color: #000000;
+      font-weight: 500;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .nav-link{
+    font-size: 14px;
+  }}
+  
+   
+  
+  

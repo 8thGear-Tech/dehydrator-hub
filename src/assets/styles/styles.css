@@ -131,22 +131,6 @@ p {
   }
 }
 
-.nav-link {
-  color: #fff !important;
-  font-size: 16px;
-  font-family: "Poppins";
-}
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 14px;
-  }
-}
-
-.nav-link:hover, .active {
-  border-bottom: 1px solid #ffffff !important;
-  border-radius: none !important;
-}
-
 textarea::-moz-placeholder, input::-moz-placeholder {
   font-size: 13px;
 }
@@ -194,5 +178,39 @@ body {
 .navbar-toggler-collapsed, .navbar-toggler-icon {
   color: #fff !important;
   fill: #fff !important;
+}
+
+.guest-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+.guest-navbar .nav-link:hover, .guest-navbar .active {
+  border-bottom: 1px solid #ffffff !important;
+  color: #fff !important;
+  border-radius: none !important;
+}
+
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar .nav-link, .service-bar .nav-link {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+.sidebar .nav-link:hover, .sidebar .active, .service-bar .nav-link:hover, .service-bar .active {
+  background-color: #E5F1FF;
+  color: #000000;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

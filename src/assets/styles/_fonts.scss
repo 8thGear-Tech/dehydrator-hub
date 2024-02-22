@@ -124,20 +124,6 @@ p {
   }
 }
 
-.nav-link{
-    color: #fff !important;
-    font-size: 16px;
-    font-family: 'Poppins';
-    @media (max-width: 768px) {
-        font-size: 14px;
-      }
-}
-
-.nav-link:hover, .active{
-    border-bottom: 1px solid #ffffff !important;
-    border-radius: none !important;
-    
-  }
 
   textarea::placeholder, input::placeholder{
     font-size: 13px;

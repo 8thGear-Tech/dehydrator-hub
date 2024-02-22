@@ -6,14 +6,26 @@ import hero2 from '../assets/images/home-hero-section-2.png'
 import GuestNavbar from '../components/Navbar/Navbar'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import Footer from '../components/Footer'
+import SidebarNavbar from '../components/Navbar/SideNavbar'
+import { ServicesNavbar } from '../components/Navbar/SideNavbar'
 
 const Home = () => {
   return (
     <div>
       <GuestNavbar/>
+      <div className='d-flex d-md-none'>
+            <ServicesNavbar/>
+            </div>
       <div className='px-3 px-md-5 mx-lg-4'>
-        <section className='my-5'>
-          <Card className='border-0 mb-5'>
+        <section className='my-3 my-md-5'>
+          <Row>
+            <Col md={3}>
+              <div className='d-none d-md-block'>
+            <SidebarNavbar/>
+            </div>
+            </Col>
+            <Col xs={12} md={9}>
+            <Card className='border-0 mb-5'>
             <Card.Img src={hero1} alt='hero1' style={{height:'380px'}}/>
 
             <Card.ImgOverlay className='px-3 py-5 px-md-5'>
@@ -23,8 +35,11 @@ const Home = () => {
 
             </Card.ImgOverlay>
           </Card>
+            </Col>
+          </Row>
+         
         </section>
-        <section className='my-5'>
+        <section className='my-3 my-md-5'>
           <h1 className='my-4'>Millable Products</h1>
           <Row>
           {millableProducts.map((product)=>(
@@ -50,7 +65,7 @@ const Home = () => {
           ))}
           </Row>
         </section>
-        <section className='my-5'>
+        <section className='my-3 my-md-5'>
           <h1 className='my-4'>Hydration Products</h1>
           <Row>
           {hydrationProducts.map((product)=>(
@@ -76,7 +91,7 @@ const Home = () => {
           ))}
           </Row>
         </section>
-        <section className='my-5'>
+        <section className='my-3 my-md-5'>
           <h1 className='my-4'>Dehydrating Machine</h1>
           <Row>
           {dehydrationMachine.map((product)=>(
@@ -104,7 +119,7 @@ const Home = () => {
           ))}
           </Row>
         </section>
-        <section className='my-5 py-5 px-lg-5'>
+        <section className='my-3 my-md-5 py-5 px-lg-5'>
           <Card className='border-0'>
             <Card.Img src={hero2} alt='hero1' style={{height:'345px'}}/>
 
@@ -117,7 +132,7 @@ const Home = () => {
             </Card.ImgOverlay>
           </Card>
         </section>
-        <section className='my-5 py-lg-4'>
+        <section className='my-3 my-md-5 py-lg-4'>
           <h1 className='my-4'>Shop</h1>
           <Row className='mb-1'>
           {millableProducts.map((product)=>(
@@ -167,7 +182,7 @@ const Home = () => {
           </Row>
          
         </section>
-        <section className='my-5 py-lg-4'>
+        <section className='my-3 my-md-5 py-lg-4'>
           <h1 className='my-4'>Lorem Ipsum</h1>
           <h6>Lorem Ipsum is simply dummy text of the printing and typesetting <br/> industry. </h6>
           <Card className='border-0 my-3' style={{background:'#000000', borderRadius:'15px'}}>
