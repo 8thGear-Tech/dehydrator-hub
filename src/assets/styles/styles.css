@@ -213,4 +213,11 @@ body {
     font-size: 14px;
   }
 }
+.about .nav-link {
+  font-size: 12px;
+  color: #848484;
+}
+.about .active {
+  color: #81AC29;
+}
 /*# sourceMappingURL=styles.css.map */

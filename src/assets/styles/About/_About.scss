@@ -1,0 +1,11 @@
+@use '../colors' as *;
+
+.about{
+    .nav-link{
+        font-size: 12px;
+        color: #848484;
+    }
+    .active{
+        color: $tertextcolor;
+    }
+}
