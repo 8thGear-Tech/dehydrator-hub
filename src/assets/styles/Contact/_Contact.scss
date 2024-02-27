@@ -1,0 +1,15 @@
+.social-icon{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+    background:#fff;
+    border-radius:50%;
+}
+
+.border-line{
+    border-right:1px solid #dfdcdc;
+    }
+    @media (max-width: 768px) {
+        .border-line{
+            border-bottom:1px solid #dfdcdc;
+            border-right: none;
+        }
+    }    

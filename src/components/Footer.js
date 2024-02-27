@@ -27,10 +27,10 @@ const Footer = () => {
             </Col>
             <Col xs={12} sm={6} md={3} className='d-flex align-items-end gap-3 mb-4'>
                 
-                <i className='bi bi-facebook px-1' style={{background:'#fff', borderRadius:'50%'}}></i>
-                <i className='bi bi-instagram px-1' style={{background:'#fff', borderRadius:'50%'}}></i>
-                <i className='bi bi-twitter px-1' style={{background:'#fff', borderRadius:'50%'}}></i>
-                <i className='bi bi-linkedin px-1' style={{background:'#fff', borderRadius:'50%'}}></i>
+                <i className='bi bi-facebook px-1 social-icon' ></i>
+                <i className='bi bi-instagram px-1 social-icon' ></i>
+                <i className='bi bi-twitter px-1 social-icon' ></i>
+                <i className='bi bi-linkedin px-1 social-icon' ></i>
             </Col>
         </Row>
         <div  className='py-3 text-center text-white' style={{fontSize:'13px'}}> Copyright &copy; 2021 Company All rights Received</div>
