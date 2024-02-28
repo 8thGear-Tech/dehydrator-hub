@@ -8,24 +8,13 @@ import line1 from '../assets/images/line1.svg'
 import line2 from '../assets/images/line2.svg'
 import arrowDown from '../assets/images/arrow-down.svg'
 import arrowRight from '../assets/images/arrow-right.svg'
+import { allFAQ } from '../data'
 
-export const allFAQ= [
-  {id:1,
-  title:'What is Webflow and why is it the best website builder?',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-{id:2,
-  title:'What is your favorite template from BRIX Templates?',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-{id:3,
-  title:'What is your favorite template from BRIX Templates?',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-{id:4,
-  title:'What is your favorite template from BRIX Templates?',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-]
+
 
 const FAQ = () => {
   const [activeKey, setActiveKey] = useState(null);
+  const [faqs, setFaqs] = useState(allFAQ);
 
   const toggleActiveKey = (key) => {
     setActiveKey(activeKey === key ? null : key);
@@ -55,15 +44,10 @@ const FAQ = () => {
         <img  src={line2} alt='line' className='d-none d-md-flex  position-absolute' style={{bottom:'-3%', left:"-9%"}}/>
         <div className='mx-xl-5 px-xl-5'>
         <Accordion className='gap-3 z-0' defaultActiveKey={activeKey}>
-      {allFAQ.map((faq, index) => (
+      {faqs.map((faq, index) => (
         <Accordion.Item eventKey={String(index)} key={faq.id} className='mb-4' style={{border:'none', borderRadius:'15px'}}>
           <Accordion.Header onClick={() => toggleActiveKey(String(index))} style={{ alignItems: 'center', display: 'flex', cursor:'pointer',position:'relative' }}> 
-            {/* {activeKey === String(index) ? (
-
-              <i className='bi bi-chevron-up' style={{ borderRadius:'50%', backgroundColor:'#81AC29', color:'white', padding:'5px', boxShadow: '0 2px 100px 0 rgba(156, 156, 156, 0.25)', position:'absolute', right:'2.5%', zIndex:'3'}}></i>
-            ) : (
-              <i className='bi bi-chevron-right' style={{ borderRadius:'50%', backgroundColor:'#fffff', color:'#81AC29', padding:'5px', boxShadow: '0 2px 100px 0 rgba(156, 156, 156, 0.25)', position:'absolute', right:'2.4%', zIndex:'3' }}></i>
-            )} */}
+          
               <img  className='arrows'
               src={activeKey === String(index) ? arrowDown : arrowRight}
               alt="Toggle Icon"

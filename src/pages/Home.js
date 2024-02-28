@@ -54,7 +54,7 @@ const Home = () => {
                       <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
                       <h6 style={{color:'#606060'}}>{product.productName}</h6>
                     </div>
-                    
+                   
                   
                   
                   </div>
@@ -80,7 +80,7 @@ const Home = () => {
                       <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
                       <h6 style={{color:'#606060'}}>{product.productName}</h6>
                     </div>
-                    
+                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
                   
                   
                   </div>

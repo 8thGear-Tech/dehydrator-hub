@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GuestNavbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
 import { Col, Image, Row, Card, Button } from "react-bootstrap";
+import { testimonials, whyWork, aboutUs } from "../data";
 import hero1 from '../assets/images/about-hero-1.png'
 import hero2 from '../assets/images/about-hero-2.png'
 import blog1 from '../assets/images/blog1.png'
@@ -14,50 +15,7 @@ import testimony1 from '../assets/images/testimony1.png'
 import points from '../assets/images/points.svg'
 import ellipse from '../assets/images/ellipse.svg'
 import { Form, NavLink } from "react-router-dom";
-const whyWork= [
-  {id:1,
-    title:'Lorem Ipsum',
-    text:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-  },
-  {id:2,
-    title:'Lorem Ipsum',
-    text:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-  },
-  {id:3,
-    title:'Lorem Ipsum',
-    text:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-  },
-]
 
-const testimonials = [
-  {
-    imgSrc: testimony1,
-    quote: "File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.",
-    name: "Larry Diamond",
-    title: "Chief Executive Director",
-  },
-  {
-    imgSrc:testimony1,
-    quote: "Effortlessly managing people with integrated tools that offer unmatched speed and reliability.",
-    name: "Samantha Brooks",
-    title: "Food Manager",
-  },
-  // Add more testimonials as needed
-];
-
-const aboutUs = [
-  {
-    image: hero1,
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    heading: "Lorem Ipsum is simply dummy text of the printing and",
-  },
-  {
-    image:hero1,
-    text: "The best Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    heading: "Lorem Ipsum is simply dummy text of the printing and",
-  },
-  // Add more testimonials as needed
-];
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentAboutIndex, setCurrentAboutIndex] = useState(0);
