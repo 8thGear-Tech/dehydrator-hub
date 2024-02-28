@@ -1,0 +1,91 @@
+
+/* Custom styles for the accordion */
+.accordion-button:not(.collapsed) {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border-top: 2px solid #81AC29 !important; 
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    border-left: 2px solid #81AC29 !important; 
+    border-right: 2px solid #81AC29 !important; 
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
+}
+
+.arrows{
+    right: 2%;
+    width: 50px;
+    height: 50px;
+}
+.accordion-button.collapsed{
+    box-shadow: none !important;
+    border-bottom: none !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    padding: 2rem !important;
+    border-radius: 18px !important;
+}
+
+.accordion-button:focus{
+    box-shadow: none !important;
+}
+.accordion-button:not(.collapsed)::after{
+    // background-color: #81AC29 !important; 
+    // color: white !important; 
+    // border-radius: 50% !important;
+    // padding: 10px;
+    // fill: #fff !important;
+    display: hidden !important;
+    background-image: none !important;
+  
+  }
+ 
+  .accordion-button {
+    background-image: none !important; /* Removes the default background arrow image */
+}
+ .accordion-collapse {
+   
+    border-bottom: 2px solid #81AC29 !important; 
+    border-left: 2px solid #81AC29 !important; 
+    border-right: 2px solid #81AC29 !important; 
+    
+  }
+  .accordion-button:not(.collapsed) + .accordion-body {
+  box-shadow: "0 2px 100px 0 rgba(156, 156, 156, 0.25)" !important;
+  
+  }
+
+  .accordion-body, .accordion-button{
+    padding: 1.5rem !important;
+  }
+  
+  .accordion-btn-active-icon{
+    color:'#fff' !important;
+    fill:'#fff' !important;
+  }
+
+  .accordion-item{
+    border-radius: 18px !important;
+  }
+  @media (max-width: 768px) {
+    .accordion-button:not(.collapsed) {
+      
+        font-size: 16px !important;
+        padding: 1rem !important;
+      
+    }
+    
+    .accordion-button.collapsed{
+       
+        font-size: 16px !important;
+        padding: 1rem !important;
+    }
+    .accordion-body, .accordion-button{
+        padding: 1rem !important;
+      }
+      .arrows{
+        right: 0%;
+        
+    }
+  }

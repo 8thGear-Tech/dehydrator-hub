@@ -54,7 +54,7 @@ const Home = () => {
                       <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
                       <h6 style={{color:'#606060'}}>{product.productName}</h6>
                     </div>
-                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
+                    
                   
                   
                   </div>
@@ -80,7 +80,7 @@ const Home = () => {
                       <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
                       <h6 style={{color:'#606060'}}>{product.productName}</h6>
                     </div>
-                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
+                    
                   
                   
                   </div>
@@ -132,56 +132,7 @@ const Home = () => {
             </Card.ImgOverlay>
           </Card>
         </section>
-        <section className='my-3 my-md-5 py-lg-4'>
-          <h1 className='my-4'>Shop</h1>
-          <Row className='mb-1'>
-          {millableProducts.map((product)=>(
-            <Col xs={6} md={3} key={product.id} className='mb-3'>
-              <Card style={{borderRadius:'16px'}}>
-                <div className='p-2 p-md-4' style={{borderBottom:'1px solid #dfdcdc'}}>
-                  <Card.Img src={product.productImage} />
-                </div>
-                <Card.Body>
-                  <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                      <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
-                      <h6 style={{color:'#606060'}}>{product.productName}</h6>
-                    </div>
-                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
-                  
-                  
-                  </div>
-
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-          </Row>
-          <Row>
-          {hydrationProducts.map((product)=>(
-            <Col xs={6} md={3} key={product.id} className='mb-3'>
-              <Card style={{borderRadius:'16px'}}>
-                <div className='p-2 p-md-4' style={{borderBottom:'1px solid #dfdcdc'}}>
-                  <Card.Img src={product.productImage} />
-                </div>
-                <Card.Body>
-                  <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                      <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
-                      <h6 style={{color:'#606060'}}>{product.productName}</h6>
-                    </div>
-                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
-                  
-                  
-                  </div>
-
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-          </Row>
-         
-        </section>
+       
         <section className='my-3 my-md-5 py-lg-4'>
           <h1 className='my-4'>Lorem Ipsum</h1>
           <h6>Lorem Ipsum is simply dummy text of the printing and typesetting <br/> industry. </h6>
