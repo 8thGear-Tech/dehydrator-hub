@@ -22,8 +22,8 @@ const Contact = () => {
         <h2>Lorem Ipsum is simply dummy text of the printing and.</h2>
         <h6 style={{color:'#898989'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h6>
         </div>
-        <div className='d-block d-md-flex  justify-content-between  mt-5'>
-          <div className='d-flex flex-column gap-3 border-line pe-lg-5 pb-4 pb-md-0'>
+        <div className='row  mt-5'>
+          <div className='col-12 col-md-4 d-flex flex-column gap-3 border-line pe-lg-5 pb-4 pb-md-0'>
             <h6>Follow us</h6>
             <div className='d-flex align-items-end gap-3 pe-lg-5'>
                 
@@ -34,15 +34,14 @@ const Contact = () => {
             </div>
             </div>
           
-            <div className='border-line'>
-              <div className='d-flex gap-3 pe-lg-5 my-3'> <FaPhoneVolume/> <h5 style={{fontWeight:'300'}} className='pe-lg-5'>+94 0000 00000</h5></div>
+            <div className='col-12 col-md-4 border-line'>
+              <div className='d-flex gap-3  my-3'> <FaPhoneVolume/> <h5 style={{fontWeight:'300'}} className='pe-lg-5'>08085554485</h5></div>
               
             </div>
           
-            <div className='d-flex gap-3 my-3 py-2 py-md-0' >
+            <div className='col-12 col-md-4 d-flex gap-3 my-3 py-2 py-md-0' >
               <i className='bi bi-geo-alt-fill'></i>
-              <h5  style={{fontWeight:'300'}}>but also the leap into electronic <br/>
-typesetting</h5>
+              <h5  style={{fontWeight:'300'}}>38 Cipm Ave, Alausa, Ikeja Cipm Ave, Alausa, Ikeja 101233, Lagosja 101233, Lagos</h5>
             </div>
           </div>
 

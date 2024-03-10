@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { Navbar, Nav, Button } from 'react-bootstrap'
+import logo from '../../assets/images/dehydrator-logo.svg'
 
 const GuestNavbar = () => {
   const navigate = useNavigate()
@@ -16,8 +17,8 @@ const GuestNavbar = () => {
      </Navbar>
      <Navbar expand="lg" style={{background:'linear-gradient(90.05deg, #81AC29 -5.66%, #567904 115.63%)', color:'#ffffff'}} className='px-3 px-md-5 guest-navbar'>
      <Navbar.Brand className='ms-0 ms-lg-4'>
-        <Link to='/'  style={{textDecoration:'none', fontWeight:'800', fontSize:'28px'}}>
-        <div className='text-white' >LOGO</div>
+        <Link to='/'  style={{textDecoration:'none'}}>
+        <img src={logo}/>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarSupportedContent" />

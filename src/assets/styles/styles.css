@@ -149,7 +149,7 @@ textarea::placeholder, input::placeholder {
 
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -160,7 +160,13 @@ body {
 
 .btn {
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 16px !important;
+}
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+  }
 }
 
 .btn-primary {
@@ -317,5 +323,19 @@ body {
   .arrows {
     right: 0%;
   }
+}
+.active-text-outline {
+  background-color: #ffffff;
+  border: none;
+  color: #0D6EFD !important;
+  border-bottom: 2px solid #0D6EFD !important;
+  border-radius: 0px !important;
+}
+
+.btn-text {
+  color: "#8B96A5" !important;
+  font-weight: 500;
+  background-color: #ffffff;
+  border: none;
 }
 /*# sourceMappingURL=styles.css.map */

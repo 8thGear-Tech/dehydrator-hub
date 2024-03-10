@@ -83,22 +83,7 @@ export const ServicesNavbar = () => {
 };
 
 
-// export const ServicesNavbar = () => {
-    
-//     return(
-//         <Navbar className='px-3 px-md-5 py-3'>
-//         <Nav className="d-flex gap-2 gap-md-3" >
-//          <Nav.Link className='nav-link text-dark' style={{backgroundColor:'#E5F1FF', fontWeight:'500'}}>Services</Nav.Link>
-//          <Nav.Link  to='/milling' className='nav-link text-dark'>Milling</Nav.Link>
-//          <Nav.Link  to='/hydration' className='nav-link text-dark'>Hydration</Nav.Link>
-//          <Nav.Link  to='/packaging' className='nav-link text-dark'>Packaging</Nav.Link>
-//          <Nav.Link  to='/machinery' className='nav-link text-dark'>Machinery</Nav.Link>
-//          <Nav.Link  to='/dry-products' className='nav-link text-dark'>Dry products</Nav.Link>
-//      </Nav> 
- 
-//      </Navbar>
-//     )
-// }
+
 const SidebarNavbar = () => {
   return (
    

@@ -1,5 +1,5 @@
 import React from 'react'
-import { millableProducts, hydrationProducts, dehydrationMachine } from '../data'
+import { millableProducts, hydrationProducts, dehydrationMachine, processingRates } from '../data'
 import hero1 from '../assets/images/home-hero-section.png'
 import hero2 from '../assets/images/home-hero-section-2.png'
 
@@ -8,8 +8,38 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import Footer from '../components/Footer'
 import SidebarNavbar from '../components/Navbar/SideNavbar'
 import { ServicesNavbar } from '../components/Navbar/SideNavbar'
+import { useNavigate } from 'react-router-dom'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+
+const containerStyle = {
+  width: '100%',
+  height: '355px'
+};
+
+const center = {
+  lat: 9.0820,
+  lng: 8.6753
+};
+const options = {
+  restriction: {
+    latLngBounds: {
+      north: 13.885645, // Northernmost point of Nigeria
+      south: 4.277144, // Southernmost point of Nigeria
+      east: 14.680073, // Easternmost point of Nigeria
+      west: 2.668432, // Westernmost point of Nigeria
+    },
+    strictBounds: true,
+  },
+};
 
 const Home = () => {
+  const navigate = useNavigate();
+  function handleProductClick(productId, category) {
+  console.log(category, productId);
+    navigate(`/product/${category}-${productId}`);
+  }
+  
   return (
     <div>
       <GuestNavbar/>
@@ -39,93 +69,128 @@ const Home = () => {
           </Row>
          
         </section>
+        <div>
+        <h2>Produce we process</h2>
+       
         <section className='my-3 my-md-5'>
-          <h1 className='my-4'>Millable Products</h1>
+          <div className='my-4'>
+          <p className= 'py-2 px-1 align-items-center text-center' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'150px'}}>Prepping and Milling</p>
+          </div>
           <Row>
           {millableProducts.map((product)=>(
             <Col xs={6} md={3} key={product.id} className='mb-3'>
-              <Card style={{borderRadius:'16px'}}>
+              <Card style={{borderRadius:'16px'}} onClick={() => handleProductClick(product?.id, 'millable')} className='h-100'>
                 <div className='p-2 p-md-4' style={{borderBottom:'1px solid #dfdcdc'}}>
                   <Card.Img src={product.productImage} />
                 </div>
-                <Card.Body>
+                <Card.Body className='py-2'>
                   <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                      <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
-                      <h6 style={{color:'#606060'}}>{product.productName}</h6>
+                    
+                      <h5 style={{color:'#1C1C1C'}}>{product.productName}</h5>
                     </div>
                    
                   
                   
-                  </div>
+                  
 
                 </Card.Body>
               </Card>
             </Col>
           ))}
           </Row>
+          <div className='text-center mt-3 mb-5'>
+            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+          </div>
         </section>
         <section className='my-3 my-md-5'>
-          <h1 className='my-4'>Hydration Products</h1>
+        <div>
+          <p className='p-2 align-items-center text-center my-4' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'100px'}}>Drying</p>
+          </div>
           <Row>
           {hydrationProducts.map((product)=>(
             <Col xs={6} md={3} key={product.id} className='mb-3'>
-              <Card style={{borderRadius:'16px'}}>
+              <Card style={{borderRadius:'16px'}} onClick={() => handleProductClick(product?.id, 'hydration')} className='h-100'> 
                 <div className='p-2 p-md-4' style={{borderBottom:'1px solid #dfdcdc'}}>
                   <Card.Img src={product.productImage} />
                 </div>
-                <Card.Body>
+                <Card.Body className='py-2'>
                   <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                      <h5>${product.productPrice} {product.productOldPrice && <span style={{color:'#8B96A5', textDecoration:'line-through', fontWeight:'400', fontSize:'13px'}}>${product.productOldPrice}</span>}</h5>
-                      <h6 style={{color:'#606060'}}>{product.productName}</h6>
+                    
+                      <h5 style={{color:'#1C1C1C'}}>{product.productName}</h5>
                     </div>
-                    <i className='bi bi-heart px-1 py-auto my-auto' style={{color:'blue', border:'1px solid #DEE2E7',borderRadius:'2px', height:'25px'}}></i>
+                   
                   
                   
-                  </div>
+                  
 
                 </Card.Body>
               </Card>
             </Col>
           ))}
           </Row>
+          <div className='text-center mb-5 mt-3'>
+            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+          </div>
         </section>
+        </div>
         <section className='my-3 my-md-5'>
-          <h1 className='my-4'>Dehydrating Machine</h1>
+          <h2 className='my-5'>Processing rates</h2>
           <Row>
-          {dehydrationMachine.map((product)=>(
-            <Col xs={6} md={3} key={product.id} className='mb-3'>
-              <Card style={{borderRadius:'16px'}}>
-                <div className='p-2 p-md-4'>
+          {processingRates.map((product)=>(
+            <Col xs={12} md={6} key={product.id} className=' mb-4 mb-md-3'>
+              <Card style={{borderRadius:'16px', border:'1px solid #DEE2E7'}} className='h-100 px-3 pt-3 pb-4'>
+                <Row className=''>
+                <Col xs={6} >
+                  <Card className='p-2 align-items-center justify-content-center h-100' style={{borderRadius:'6px', border:'1px solid #DEE2E7'}}>
                   <Card.Img src={product.productImage} />
-                </div>
-                <Card.Body>
-                  <h6 style={{fontWeight:'600'}}>{product.productName}</h6>
-                  <div className='d-flex justify-content-between align-items-center'>
-                    <div>
-                     <h6  style={{color:'#8B96A5'}}>{product.productType}</h6>
-                     <h6  style={{color:'#8B96A5'}}>{product.productSize}</h6>
-                     <h6  style={{color:'#8B96A5'}}>{product.location}</h6>
-                    </div>
-                    <h6  style={{color:'#8B96A5'}}>{product.produtctDesription}</h6>
-                  
-                  
-                  </div>
+                  </Card>
+                 
+                </Col>
+                <Col xs={6} >
+                  <div className='d-flex flex-column gap-0 my-3 my-sm-5 py-0 py-sm-5 py-md-0 py-lg-5 h-100'>
+                  <h4 className='mt-3 mt-sm-0'style={{fontWeight:'600', color:'#1C1C1C'}}>{product.productType}</h4>
+                  {product.productPrice && <h4 className='p-3 align-items-center text-center my-4' style={{backgroundColor:'#FFF0DF', color:'#FA3434', fontWeight:'600', width:'145px'}}>N{product.productPrice}/kg</h4>}
+          
+          
 
-                </Card.Body>
+          <h6 style={{fontStyle:'italic', color:'#505050'}}>{product.productDescription}</h6>
+                  </div>
+                  
+                </Col>
+                </Row>
               </Card>
             </Col>
           ))}
           </Row>
+          <div className='text-center mb-5 mt-3'>
+            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+          </div>
+        </section>
+        <section className='my-3 my-md-5 py-5 px-lg-5'>
+        <h2 className='my-5'>Locations where our listed machines are</h2>
+        <div className=''>
+        <LoadScript
+      googleMapsApiKey="AIzaSyDAgwgCtBfG0pHN002HB7Fh-ZrBB0VEhUA" // Replace with your API key
+    >
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={6}
+        options={options}
+      >
+        {/* Child components, like markers, info windows, etc. */}
+      </GoogleMap>
+    </LoadScript>
+        </div>
+        
         </section>
         <section className='my-3 my-md-5 py-5 px-lg-5'>
           <Card className='border-0'>
             <Card.Img src={hero2} alt='hero1' style={{height:'345px'}}/>
 
-            <Card.ImgOverlay className='px-3 py-5 px-md-5' style={{maxWidth:'35rem', color:'#ffffff'}}>
-              <h1 style={{ color:'#ffffff'}}>An easy way to send requests to all suppliers</h1>
-              <h5 className='mt-3'style={{ color:'#ffffff', fontWeight:'400'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</h5>
+            <Card.ImgOverlay className='px-3 py-5 px-md-5' style={{maxWidth:'40rem', color:'#ffffff'}}>
+              <h1 style={{ color:'#ffffff'}}>An easy way to get your machines listed for producers</h1>
+              <h5 className='mt-3'style={{ color:'#ffffff', fontWeight:'400'}}>Do you have idle capacity for your processing equipment, put you machines to optimal use. List with Dehydrator Hub today!</h5>
               
               <Button className='my-3 px-3 btn-primary' style={{borderRadius:'40px'}}>Get in touch</Button>
 
@@ -134,18 +199,16 @@ const Home = () => {
         </section>
        
         <section className='my-3 my-md-5 py-lg-4'>
-          <h1 className='my-4'>Lorem Ipsum</h1>
-          <h6>Lorem Ipsum is simply dummy text of the printing and typesetting <br/> industry. </h6>
+          
           <Card className='border-0 my-3' style={{background:'#000000', borderRadius:'15px'}}>
             
 
             <Row className='px-3 py-5 px-md-5 align-items-center'>
               
               <Col xs={12} md={7} className='mb-3' >
-                <h2 className='mb-3 text-white'>Dehydrator Hub</h2>
-                <h5 className='text-white' style={{fontWeight:'400'}}>Subscribe to receive the latest news and updates about TDA. </h5>
-<h5 className='text-white' style={{fontWeight:'400'}}>
-We promise not to spam you! </h5>
+                <h2 className='mb-3 text-white'>We love your feedback</h2>
+                <h5 className='text-white' style={{fontWeight:'400'}}>Dehydrator Hub is built on the back of excellent customer service and delivery to our customers. In order to improve our delivery to you, please share your feedback. We need to know what works. </h5>
+
               </Col>
               <Col xs={12} md={5}><Card className='d-flex flex-column gap-3 border-0 p-4' >
               <h5>Give us your feedback</h5>
