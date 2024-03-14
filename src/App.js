@@ -10,6 +10,8 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/Faq";
 import Blog from "./pages/Blog";
 import BlogContent from "./pages/BlogContent";
+import Machinery from "./pages/Machinery";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog-content/:blogId" element={<BlogContent />} />
+      <Route path="/product/:productId" element={<Product />} />
         </Routes></BrowserRouter>
   );
 }
