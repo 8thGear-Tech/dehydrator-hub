@@ -7,8 +7,8 @@ import dehydratingMachine from './assets/images/dehydrating-machine.png'
 
 import hero1 from './assets/images/about-hero-1.png'
 import hero2 from './assets/images/about-hero-2.png'
-
-import testimony1 from './assets/images/testimony1.png'
+import processing from './assets/images/processing.jpg'
+import testimony from './assets/images/testimony.png'
 import testimony2 from './assets/images/testimony2.png'
 import blog1 from './assets/images/blog-post-1.png'
 import blog2 from './assets/images/blog-post-2.png'
@@ -64,10 +64,10 @@ export const whyWork= [
       title: "Useful Herbs",
     },
     {
-      imgSrc:testimony1,
-      quote: "Effortlessly managing people with integrated tools that offer unmatched speed and reliability.",
-      name: "Samantha Brooks",
-      title: "Food Manager",
+      imgSrc:testimony,
+      quote: "Funmi is the surest plug, my business support partner and friend of over 2 decades too. Best girly",
+      name: "Bonis Food Market, Nigeria.",
+     
     },
     // Add more testimonials as needed
   ];
@@ -79,9 +79,10 @@ export const whyWork= [
       heading: "Dehydrator Hub connects producers with processors and processing machinery.",
     },
     {
-      image:hero1,
+    
       text: "",
       heading: "Dehydrator Hub connects producers with processors and processing machinery.",
+      image:processing
     },
    
   ];

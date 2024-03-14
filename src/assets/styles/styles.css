@@ -186,6 +186,11 @@ body {
   fill: #fff !important;
 }
 
+.form-check-input:checked {
+  background-color: #81AC29 !important;
+  border-color: #81AC29 !important;
+}
+
 .guest-navbar .nav-link {
   color: #fff;
   font-size: 16px;
@@ -225,6 +230,25 @@ body {
 }
 .about .active {
   color: #81AC29;
+}
+
+.testimony-image {
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .testimony-image {
+    height: 300px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .pointers {
+    height: 40px;
+    width: 45px;
+  }
 }
 
 .social-icon {

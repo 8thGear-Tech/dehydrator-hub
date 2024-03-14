@@ -18,7 +18,7 @@ const Footer = () => {
                 <h6 className='mb-3 text-white' style={{fontWeight:'600', cursor:'pointer'}} onClick={()=> navigate('/about-us')}>About us</h6>
                 <div className='d-flex flex-column gap-1'>
                 <h6 className='text-white' style={{cursor:'pointer'}}onClick={()=> navigate('/')}>Services</h6>
-               
+                <h6 style={{ cursor:'pointer'}}className='text-white' onClick={()=> navigate('/')}>MarketPlace</h6>
                 <h6 style={{ cursor:'pointer'}}className='text-white' onClick={()=> navigate('/faq')}>FAQ</h6>
                 <h6 style={{cursor:'pointer'}} onClick={()=> navigate('/blog')}className='text-white'>Blog</h6>
                 </div>

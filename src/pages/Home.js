@@ -59,8 +59,8 @@ const Home = () => {
             <Card.Img src={hero1} alt='hero1' style={{height:'380px'}}/>
 
             <Card.ImgOverlay className='px-3 py-5 px-md-5'>
-              <h3>Lets Process, dry and</h3>
-              <h1>turn your food to products</h1>
+              <h3>Lets process your produce and</h3>
+              <h1>convert them into valuable products</h1>
               <Button variant='light' className='my-4 px-3'> Learn more</Button>
 
             </Card.ImgOverlay>
@@ -69,12 +69,13 @@ const Home = () => {
           </Row>
          
         </section>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example " tabindex="0">
         <div>
         <h2>Produce we process</h2>
        
         <section className='my-3 my-md-5'>
           <div className='my-4'>
-          <p className= 'py-2 px-1 align-items-center text-center' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'150px'}}>Prepping and Milling</p>
+          <p className= 'py-2 px-1 align-items-center text-center' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'150px'}} id="scrollspyHeading1">Prepping and Milling</p>
           </div>
           <Row>
           {millableProducts.map((product)=>(
@@ -99,12 +100,12 @@ const Home = () => {
           ))}
           </Row>
           <div className='text-center mt-3 mb-5'>
-            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+            <Button className='btn-primary ' style={{width:'230px'}} onClick={()=> navigate('/form/produce')}>Request Service</Button>
           </div>
         </section>
         <section className='my-3 my-md-5'>
         <div>
-          <p className='p-2 align-items-center text-center my-4' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'100px'}}>Drying</p>
+          <p className='p-2 align-items-center text-center my-4' style={{backgroundColor:'rgba(176, 0, 220, 0.11)', color:'#B000DC', padding:'6px, 14px, 6px, 14px', borderRadius:'8px', width:'100px'}} id="scrollspyHeading2">Drying</p>
           </div>
           <Row>
           {hydrationProducts.map((product)=>(
@@ -129,12 +130,12 @@ const Home = () => {
           ))}
           </Row>
           <div className='text-center mb-5 mt-3'>
-            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+            <Button className='btn-primary ' style={{width:'230px'}} onClick={()=> navigate('/form/produce')}>Request Service</Button>
           </div>
         </section>
         </div>
         <section className='my-3 my-md-5'>
-          <h2 className='my-5'>Processing rates</h2>
+          <h2 className='my-5' id="scrollspyHeading3">Processing rates</h2>
           <Row>
           {processingRates.map((product)=>(
             <Col xs={12} md={6} key={product.id} className=' mb-4 mb-md-3'>
@@ -163,9 +164,10 @@ const Home = () => {
           ))}
           </Row>
           <div className='text-center mb-5 mt-3'>
-            <Button className='btn-primary ' style={{width:'230px'}}>Request Service</Button>
+            <Button className='btn-primary ' style={{width:'230px'}}onClick={()=> navigate('/form/produce')}>Request Service</Button>
           </div>
         </section>
+        </div>
         <section className='my-3 my-md-5 py-5 px-lg-5'>
         <h2 className='my-5'>Locations where our listed machines are</h2>
         <div className=''>
@@ -192,7 +194,7 @@ const Home = () => {
               <h1 style={{ color:'#ffffff'}}>An easy way to get your machines listed for producers</h1>
               <h5 className='mt-3'style={{ color:'#ffffff', fontWeight:'400'}}>Do you have idle capacity for your processing equipment, put you machines to optimal use. List with Dehydrator Hub today!</h5>
               
-              <Button className='my-3 px-3 btn-primary' style={{borderRadius:'40px'}}>Get in touch</Button>
+              <Button className='my-3 px-3 btn-primary' style={{borderRadius:'40px'}} onClick={()=> navigate('/form/machinery')}>Get in touch</Button>
 
             </Card.ImgOverlay>
           </Card>

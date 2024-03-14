@@ -7,7 +7,7 @@ import hero1 from '../assets/images/about-hero-1.png'
 import hero2 from '../assets/images/about-hero-2.png'
 import blog1 from '../assets/images/blog1.png'
 import blog2 from '../assets/images/blog2.png'
-import team1 from '../assets/images/team1.svg'
+import team1 from '../assets/images/8thgear.png'
 import team2 from '../assets/images/team2.svg'
 import team3 from '../assets/images/team3.svg'
 import team4 from '../assets/images/team4.svg'
@@ -16,13 +16,13 @@ import points from '../assets/images/points.svg'
 import ellipse from '../assets/images/ellipse.svg'
 import user from '../assets/images/user.png'
 import ceo from '../assets/images/ceo.png'
-import { Form, NavLink } from "react-router-dom";
+import { Form, NavLink, useNavigate } from "react-router-dom";
 
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentAboutIndex, setCurrentAboutIndex] = useState(0);
-
+const navigate = useNavigate();
   const goToPrevious = () => {
     const isFirstTestimonial = currentIndex === 0;
     const newIndex = isFirstTestimonial ? testimonials.length - 1 : currentIndex - 1;
@@ -76,7 +76,7 @@ const About = () => {
       <div>
       <Row className="pt-3 pb-5 gap-0 g-0">
       <Col xs={12} md={6} className="order-md-2 position-relative">
-        <Image fluid src={image} alt='hero'/>
+        <Image fluid src={image} alt='hero' />
         <div className="d-flex gap-2 align-items-center position-absolute p-2" style={{bottom:'0%', left:'0%', backgroundColor:'#333333', color:'#ffffff'}}>
         <i className="bi bi-arrow-left" onClick={goToAboutPrevious}></i>
         <p style={{color:'#ffffff'}} className="my-auto">{currentAboutIndex + 1} of {aboutUs.length}</p>
@@ -98,7 +98,7 @@ const About = () => {
             <h6>{text}</h6>
           </div>
           <div>
-            <Button className='my-3 px-3 btn-primary' style={{borderRadius:'40px'}}>Get in touch</Button>
+            <Button className='my-3 px-3 btn-primary' style={{borderRadius:'40px'}} onClick={()=> navigate('/form/machinery')}>Get in touch</Button>
           </div>
           </div>
           </div>
@@ -181,32 +181,28 @@ const About = () => {
         </Row>
       </section>
       <section className="p-3 p-md-5" style={{backgroundColor:'#F5F5F5'}}>
-        <div className="mx-lg-4">
-        <h4 style={{fontWeight:'700'}}>Our Partnership and Collaborations</h4>
-        <Row className="my-5">
+        <div className="mx-lg-4 mt-2 mt-md-0">
+        <h4 className="mb-3 mb-md-0" style={{fontWeight:'700'}}>Our Partnership and Collaborations</h4>
+        <Row className="my-lg-5">
          <Col xs={6} md={3} className="mb-3">
          <Card className="border-none p-3 justify-content-center text-center align-items-center" style={{background:'#C4C4C4',  border:'none'}}>
           <Image fluid style={{height:'100px', width:'100px'}} src={team1} alt=''/>
-          <h5 style={{fontWeight:'600'}}>John Peter</h5>
-          <h6 style={{color:'#8B8B8B', fontWeight:'300'}}>COO</h6>
+         
           </Card></Col>
           <Col xs={6} md={3} className="mb-3">
          <Card className="border-none p-3 align-items-center justify-content-center text-center" style={{background:'#C4C4C4',  border:'none'}}>
           <Image fluid style={{height:'100px', width:'100px'}} src={team2} alt=''/>
-          <h5 style={{fontWeight:'600'}}>John Peter</h5>
-          <h6 style={{color:'#8B8B8B', fontWeight:'300'}}>COO</h6>
+         
           </Card></Col>
           <Col xs={6} md={3} className="mb-3">
          <Card className="border-none p-3 align-items-center justify-content-center text-center" style={{background:'#C4C4C4', border:'none'}}>
           <Image fluid style={{height:'100px', width:'100px'}} src={team3} alt=''/>
-          <h5 style={{fontWeight:'600'}}>John Peter</h5>
-          <h6 style={{color:'#8B8B8B', fontWeight:'300'}}>COO</h6>
+         
           </Card></Col>
           <Col xs={6} md={3} className="mb-3">
          <Card className="border-none p-3 justify-content-center text-center align-items-center" style={{background:'#C4C4C4', border:'none'}}>
           <Image fluid style={{height:'100px', width:'100px'}} src={team4} alt=''/>
-          <h5 style={{fontWeight:'600'}}>John Peter</h5>
-          <h6 style={{color:'#8B8B8B', fontWeight:'300'}}>COO</h6>
+         
           </Card></Col>
         </Row>
         </div>
@@ -220,11 +216,11 @@ const About = () => {
             
             {/* Decorative elements */}
             <div className="position-absolute" style={{ top: "-5%", left: '-5%',  }}>
-              <Image fluid src={points} alt=""/>
+              <Image fluid src={points} alt="" className="pointers"/>
             </div>
-            <Image fluid src={imgSrc} alt="" className="h-100" style={{ zIndex: 1000 }}/>
+            <Image fluid src={imgSrc} alt="" className="testimony-image" style={{ zIndex: 1000 }}/>
             <div className="position-absolute" style={{ bottom: '-7%', right: '-3%', }}>
-              <Image fluid src={ellipse} alt=""/>
+              <Image fluid src={ellipse} alt="" className="pointers"/>
             </div>
           </div>
           

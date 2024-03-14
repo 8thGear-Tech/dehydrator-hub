@@ -87,13 +87,14 @@ export const ServicesNavbar = () => {
 const SidebarNavbar = () => {
   return (
    
-    <Nav className=" sidebar " >
+    <Nav className=" sidebar " id="navbar-example2" >
         <Nav.Link className='nav-link text-dark' style={{backgroundColor:'#E5F1FF', fontWeight:'500'}}>Services</Nav.Link>
-        <Nav.Link to='/milling' className='nav-link text-dark'>Milling</Nav.Link>
-        <Nav.Link  to='/hydration' className='nav-link text-dark'>Hydration</Nav.Link>
-        <Nav.Link  to='/packaging' className='nav-link text-dark'>Packaging</Nav.Link>
-        <Nav.Link  to='/machinery' className='nav-link text-dark'>Machinery</Nav.Link>
-        <Nav.Link  to='/dry-products' className='nav-link text-dark'>Dry products</Nav.Link>
+        <Nav.Link href="#scrollspyHeading1"className='nav-link text-dark'>Prepping</Nav.Link>
+        <Nav.Link href="#scrollspyHeading1" className='nav-link text-dark'>Milling</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading2" className='nav-link text-dark'>Dehydration</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading3" className='nav-link text-dark'>Packaging</Nav.Link>
+        <Nav.Link  className='nav-link text-dark'>Marketplace</Nav.Link>
+       
     </Nav>
   );
 };
