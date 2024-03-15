@@ -64,8 +64,8 @@ const Home = () => {
                 <Card.Img src={hero1} alt="hero1" style={{ height: "380px" }} />
 
                 <Card.ImgOverlay className="px-3 py-5 px-md-5">
-                  <h3>Lets process your produce and</h3>
-                  <h1>convert them into valuable food products</h1>
+                  <h3>Let's process your produce and</h3>
+                  <h1>convert them into more valuable food products</h1>
                   <Button
                     variant="light"
                     className="my-4 px-3"

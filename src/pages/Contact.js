@@ -35,11 +35,11 @@ const Contact = () => {
               Contact us
             </NavLink>
           </div>
-          <h2>Lorem Ipsum is simply dummy text of the printing and.</h2>
+          {/* <h2>Lorem Ipsum is simply dummy text of the printing and.</h2>
           <h6 style={{ color: "#898989" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{" "}
-          </h6>
+          </h6> */}
         </div>
         <div className="row  mt-5">
           <div className="col-12 col-md-4 d-flex flex-column gap-3 border-line pe-lg-5 pb-4 pb-md-0">
@@ -65,8 +65,7 @@ const Contact = () => {
           <div className="col-12 col-md-4 d-flex gap-3 my-3 py-2 py-md-0">
             <i className="bi bi-geo-alt-fill"></i>
             <h5 style={{ fontWeight: "300" }}>
-              38 Cipm Ave, Alausa, Ikeja Cipm Ave, Alausa, Ikeja 101233, Lagosja
-              101233, Lagos
+              38 CIPM Ave, Alausa, Ikeja Cipm Ave, Alausa, Ikeja 101233, Lagos
             </h5>
           </div>
         </div>

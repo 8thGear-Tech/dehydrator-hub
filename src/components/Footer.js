@@ -78,7 +78,7 @@ const Footer = () => {
             Contact us
           </h6>
           <h6 className="text-white">
-            38 Cipm Ave, Alausa, Ikeja 101233, Lagos{" "}
+            38 CIPM Ave, Alausa, Ikeja 101233, Lagos{" "}
           </h6>
           <a href="tel:08085554485" className="text-white text-decoration-none">
             08085554485
