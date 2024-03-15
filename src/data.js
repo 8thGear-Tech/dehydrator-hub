@@ -32,8 +32,9 @@ import fruits2 from './assets/images/fruits2.png'
 import fruits3 from './assets/images/fruits3.png'
 import fruits4 from './assets/images/fruits 4.png'
 import legumes from './assets/images/legumes.svg'
+import leaf from './assets/images/leaf.png'
 import seedOil from './assets/images/seed-oil.png'
-import nutOil from './assets/images/nut-oil.png'
+import nutOil from './assets/images/oil-extraction.png'
 
 
 import legumes2 from './assets/images/legumes2.png'
@@ -595,7 +596,7 @@ export const hydrationProducts = [
             id:2,
             productImage:vegetables,
             productPictures:[vegetables, vegetables,vegetables, vegetables, vegetables],
-             productName:'Vegetables (Peppers, Tomatoes,Onions,Garlic',
+             productName:'Vegetables (Peppers, Tomatoes,Onions,Garlic)',
         productPrice1kg:99.50,
         productOldPrice:1128.00,
         productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
@@ -645,7 +646,60 @@ export const hydrationProducts = [
     productCustomization:'Lorem',
         },
         {
-            id:3,
+          id:3,
+          productImage:leaf,
+          productPictures:[leaf, leaf,leaf, leaf, leaf],
+           productName:'Leafy Vegetables',
+      productPrice1kg:99.50,
+      productOldPrice:1128.00,
+      productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+      sellerName:'Adamu Michael',
+      sellerLocation:'Ikeja,Lagos,Nigeria',
+      shipping:'State',
+      price5kg:90,
+      price10kg:78,
+      warranty:'1 month',
+      productFeatures:[
+          {
+          id:1, feature:'Some great feature name here'
+          },
+          {
+          id:2, feature:'SLorem ipsum dolor sit amet, consectetur '
+          },
+          {
+          id:3, feature:'Duis aute irure dolor in reprehenderit'
+          },
+          {
+          id:4, feature:'Some great feature name here'
+          },
+     ],
+     productSize:'34mm x 450mm x 19mm',
+     productModel:'#8786867',
+     productCertificate:'ISO-898921212',
+     productMemory:'36GB RAM',
+     productStyle:'Classic',
+     productReviews:[
+      {
+      id:1, review:'Some great review  here'
+      },
+      {
+      id:2, review:'SLorem ipsum dolor sit amet, consectetur '
+      },
+      {
+      id:3, review:'Duis aute irure dolor in reprehenderit'
+      },
+      {
+      id:4, review:'Great product  here'
+      },
+  
+  ],
+  productDesign:'Lorem',
+  productType:'Lorem',
+  productMaterial:'Lorem',
+  productCustomization:'Lorem',
+      },
+        {
+            id:4,
             productImage:legumes2,
             productPictures:[legumes2, legumes2,legumes2,legumes2, legumes2],
              productName:'Legumes(Beans, Peas)',
@@ -699,7 +753,7 @@ export const hydrationProducts = [
         
         },
         {
-            id:4,
+            id:5,
             productImage:fruits3,
             productPictures:[fruits3, fruits3,fruits3, fruits3, fruits3],
              productName:'Fruits with high moisture (Pineapple, Mango, Watermelon, Cabbage)',
@@ -752,7 +806,7 @@ export const hydrationProducts = [
     productCustomization:'Lorem',
         },
         {
-            id:5,
+            id:6,
             productImage:fruits4,
             productPictures:[fruits4, fruits4,fruits4, fruits4, fruits4],
              productName:'Fruits with low moisture (Coconut, Garden egg, aubergine)',
@@ -805,7 +859,7 @@ export const hydrationProducts = [
     productCustomization:'Lorem',
         },
         {
-            id:6,
+            id:7,
             productImage:pap2,
             productPictures:[pap2, pap2,pap2, pap2, pap2],
              productName:'Pap',
@@ -858,7 +912,7 @@ export const hydrationProducts = [
     productCustomization:'Lorem',
         },
         {
-            id:7,
+            id:8,
             productImage:tubers2,
             productPictures:[tubers2, tubers2,tubers2, tubers2, tubers2],
              productName:'Tubers',
@@ -910,114 +964,118 @@ export const hydrationProducts = [
     productMaterial:'Lorem',
     productCustomization:'Lorem',
         },
-        {
-            id:8,
-            productImage:seedOil,
-            productPictures:[seedOil, seedOil,seedOil, seedOil, seedOil],
-             productName:'Seed Oil',
-        productPrice1kg:99.50,
-        productOldPrice:1128.00,
-        productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
-        sellerName:'Adamu Michael',
-        sellerLocation:'Ikeja,Lagos,Nigeria',
-        shipping:'State',
-        price5kg:90,
-        price10kg:78,
-        warranty:'1 month',
-        productFeatures:[
-            {
-            id:1, feature:'Some great feature name here'
-            },
-            {
-            id:2, feature:'SLorem ipsum dolor sit amet, consectetur '
-            },
-            {
-            id:3, feature:'Duis aute irure dolor in reprehenderit'
-            },
-            {
-            id:4, feature:'Some great feature name here'
-            },
-       ],
-       productSize:'34mm x 450mm x 19mm',
-       productModel:'#8786867',
-       productCertificate:'ISO-898921212',
-       productMemory:'36GB RAM',
-       productStyle:'Classic',
-       productReviews:[
-        {
-        id:1, review:'Some great review  here'
-        },
-        {
-        id:2, review:'SLorem ipsum dolor sit amet, consectetur '
-        },
-        {
-        id:3, review:'Duis aute irure dolor in reprehenderit'
-        },
-        {
-        id:4, review:'Great product  here'
-        },
-    
-    ],
-    productDesign:'Lorem',
-    productType:'Lorem',
-    productMaterial:'Lorem',
-    productCustomization:'Lorem',
-        },
-        {
-            id:9,
-            productImage:nutOil,
-            productPictures:[nutOil, nutOil,nutOil, nutOil, nutOil],
-             productName:'Nut Oil',
-        productPrice1kg:99.50,
-        productOldPrice:1128.00,
-        productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
-        sellerName:'Adamu Michael',
-        sellerLocation:'Ikeja,Lagos,Nigeria',
-        shipping:'State',
-        price5kg:90,
-        price10kg:78,
-        warranty:'1 month',
-        productFeatures:[
-            {
-            id:1, feature:'Some great feature name here'
-            },
-            {
-            id:2, feature:'SLorem ipsum dolor sit amet, consectetur '
-            },
-            {
-            id:3, feature:'Duis aute irure dolor in reprehenderit'
-            },
-            {
-            id:4, feature:'Some great feature name here'
-            },
-       ],
-       productSize:'34mm x 450mm x 19mm',
-       productModel:'#8786867',
-       productCertificate:'ISO-898921212',
-       productMemory:'36GB RAM',
-       productStyle:'Classic',
-       productReviews:[
-        {
-        id:1, review:'Some great review  here'
-        },
-        {
-        id:2, review:'SLorem ipsum dolor sit amet, consectetur '
-        },
-        {
-        id:3, review:'Duis aute irure dolor in reprehenderit'
-        },
-        {
-        id:4, review:'Great product  here'
-        },
-    
-    ],
-    productDesign:'Lorem',
-    productType:'Lorem',
-    productMaterial:'Lorem',
-    productCustomization:'Lorem',
-        },
+       
 
 
+]
+
+export const oilExtraction = [
+  {
+    id:1,
+    productImage:seedOil,
+    productPictures:[seedOil, seedOil,seedOil, seedOil, seedOil],
+     productName:'Seed Oil',
+productPrice1kg:99.50,
+productOldPrice:1128.00,
+productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+sellerName:'Adamu Michael',
+sellerLocation:'Ikeja,Lagos,Nigeria',
+shipping:'State',
+price5kg:90,
+price10kg:78,
+warranty:'1 month',
+productFeatures:[
+    {
+    id:1, feature:'Some great feature name here'
+    },
+    {
+    id:2, feature:'SLorem ipsum dolor sit amet, consectetur '
+    },
+    {
+    id:3, feature:'Duis aute irure dolor in reprehenderit'
+    },
+    {
+    id:4, feature:'Some great feature name here'
+    },
+],
+productSize:'34mm x 450mm x 19mm',
+productModel:'#8786867',
+productCertificate:'ISO-898921212',
+productMemory:'36GB RAM',
+productStyle:'Classic',
+productReviews:[
+{
+id:1, review:'Some great review  here'
+},
+{
+id:2, review:'SLorem ipsum dolor sit amet, consectetur '
+},
+{
+id:3, review:'Duis aute irure dolor in reprehenderit'
+},
+{
+id:4, review:'Great product  here'
+},
+
+],
+productDesign:'Lorem',
+productType:'Lorem',
+productMaterial:'Lorem',
+productCustomization:'Lorem',
+},
+{
+    id:2,
+    productImage:nutOil,
+    productPictures:[nutOil, nutOil,nutOil, nutOil, nutOil],
+     productName:'Nut Oil',
+productPrice1kg:99.50,
+productOldPrice:1128.00,
+productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+sellerName:'Adamu Michael',
+sellerLocation:'Ikeja,Lagos,Nigeria',
+shipping:'State',
+price5kg:90,
+price10kg:78,
+warranty:'1 month',
+productFeatures:[
+    {
+    id:1, feature:'Some great feature name here'
+    },
+    {
+    id:2, feature:'SLorem ipsum dolor sit amet, consectetur '
+    },
+    {
+    id:3, feature:'Duis aute irure dolor in reprehenderit'
+    },
+    {
+    id:4, feature:'Some great feature name here'
+    },
+],
+productSize:'34mm x 450mm x 19mm',
+productModel:'#8786867',
+productCertificate:'ISO-898921212',
+productMemory:'36GB RAM',
+productStyle:'Classic',
+productReviews:[
+{
+id:1, review:'Some great review  here'
+},
+{
+id:2, review:'SLorem ipsum dolor sit amet, consectetur '
+},
+{
+id:3, review:'Duis aute irure dolor in reprehenderit'
+},
+{
+id:4, review:'Great product  here'
+},
+
+],
+productDesign:'Lorem',
+productType:'Lorem',
+productMaterial:'Lorem',
+productCustomization:'Lorem',
+},
 ]
 
 

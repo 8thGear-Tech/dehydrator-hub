@@ -29,3 +29,18 @@
     width: 110px;
   }
 }
+
+.home-section .carousel-control-prev{
+  position: absolute;
+  left: -4%;
+  bottom: 10%;
+}
+.home-section .carousel-control-next {
+  position: absolute;
+  right: -4%;
+  bottom: 10%;
+}
+
+.home-section .carousel-indicators{
+  display: none;
+}

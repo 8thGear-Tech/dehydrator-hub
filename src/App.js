@@ -14,6 +14,7 @@ import BlogContent from "./pages/BlogContent";
 import Product from "./pages/Product";
 import ProduceForm from "./pages/ProduceForm";
 import MachineryForm from "./pages/MachineryForm";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/about-us" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="/services" element={<Services />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/form/produce" element={<ProduceForm />} />
       <Route path="/form/machinery" element={<MachineryForm />} />

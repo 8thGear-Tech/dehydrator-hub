@@ -10,7 +10,7 @@ h1 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
@@ -370,5 +370,21 @@ body {
   .price {
     width: 110px;
   }
+}
+
+.home-section .carousel-control-prev {
+  position: absolute;
+  left: -4%;
+  bottom: 10%;
+}
+
+.home-section .carousel-control-next {
+  position: absolute;
+  right: -4%;
+  bottom: 10%;
+}
+
+.home-section .carousel-indicators {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import { millableProducts, dehydrationMachine, hydrationProducts } from '../data';
+import { millableProducts, dehydrationMachine, hydrationProducts, oilExtraction } from '../data';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import GuestNavbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer';
@@ -43,6 +43,10 @@ const Product = () => {
         selectedProduct = dehydrationMachine.find(p => p.id === parseInt(id));
         potentialRelatedProducts = dehydrationMachine.filter(p => p.id !== selectedProduct.id);
         break;
+        case 'extraction':
+          selectedProduct = oilExtraction.find(p => p.id === parseInt(id));
+          potentialRelatedProducts = oilExtraction.filter(p => p.id !== selectedProduct.id);
+          break;
       default:
         console.warn('Unknown category:', category);
         return;

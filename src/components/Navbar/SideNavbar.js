@@ -92,8 +92,10 @@ const SidebarNavbar = () => {
         <Nav.Link href="#scrollspyHeading1"className='nav-link text-dark'>Prepping</Nav.Link>
         <Nav.Link href="#scrollspyHeading1" className='nav-link text-dark'>Milling</Nav.Link>
         <Nav.Link  href="#scrollspyHeading2" className='nav-link text-dark'>Dehydration</Nav.Link>
-        <Nav.Link  href="#scrollspyHeading3" className='nav-link text-dark'>Packaging</Nav.Link>
-        <Nav.Link  className='nav-link text-dark'>Marketplace</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading3" className='nav-link text-dark'>Oil Extraction</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading4" className='nav-link text-dark'>Packaging</Nav.Link>
+        <Nav.Link  className='nav-link text-dark'>Repairs</Nav.Link>
+        <Nav.Link  className='nav-link text-dark'>Training & certifications</Nav.Link>
        
     </Nav>
   );
