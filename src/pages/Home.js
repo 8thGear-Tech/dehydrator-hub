@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 import SidebarNavbar from '../components/Navbar/SideNavbar'
 import { ServicesNavbar } from '../components/Navbar/SideNavbar'
 import { useNavigate } from 'react-router-dom'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const containerStyle = {
@@ -172,7 +172,7 @@ const Home = () => {
         <h2 className='my-5'>Locations where our listed machines are</h2>
         <div className=''>
         <LoadScript
-      googleMapsApiKey="AIzaSyDAgwgCtBfG0pHN002HB7Fh-ZrBB0VEhUA" // Replace with your API key
+      googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} 
     >
       <GoogleMap
         mapContainerStyle={containerStyle}
