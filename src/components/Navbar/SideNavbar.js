@@ -1,18 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-
+import React, { useRef, useState, useEffect } from "react";
+import { Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
-  { id: 1, title: 'Services', url: '/services' },
-  { id: 2, title: 'Milling', url: '/milling' },
-  { id: 3, title: 'Hydration', url: '/hydration' },
-  { id: 4, title: 'Packaging', url: '/packaging' },
-  { id: 5, title: 'Machinery', url: '/machinery' },
-  { id: 6, title: 'Dry products', url: '/dry-products' },
- 
+  { id: 1, title: "Services", url: "/services" },
+  { id: 2, title: "Milling", url: "/milling" },
+  { id: 3, title: "Hydration", url: "/hydration" },
+  { id: 4, title: "Packaging", url: "/packaging" },
+  { id: 5, title: "Machinery", url: "/machinery" },
+  { id: 6, title: "Dry products", url: "/dry-products" },
 ];
-
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
@@ -26,8 +23,8 @@ const useWindowSize = () => {
       });
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowSize;
@@ -60,20 +57,35 @@ export const ServicesNavbar = () => {
   };
 
   return (
-    <Navbar className='px-3 px-md-5 py-1 py-3'>
+    <Navbar className="px-3 px-md-5 py-1 py-3">
       <Nav className="d-flex align-items-center">
         {width < breakpoints.md && (
-          <button className="btn btn-secondary" onClick={handlePrevClick} disabled={activeGroupIndex === 0}>
+          <button
+            className="btn btn-secondary"
+            onClick={handlePrevClick}
+            disabled={activeGroupIndex === 0}
+          >
             &lt;
           </button>
         )}
         <div className="navbar-nav flex-row overflow-auto">
-          {linkGroups[activeGroupIndex] && linkGroups[activeGroupIndex].map((link) => (
-            <Nav.Link href={link.url} className='nav-link text-dark' key={link.id}>{link.title}</Nav.Link>
-          ))}
+          {linkGroups[activeGroupIndex] &&
+            linkGroups[activeGroupIndex].map((link) => (
+              <Nav.Link
+                href={link.url}
+                className="nav-link text-dark"
+                key={link.id}
+              >
+                {link.title}
+              </Nav.Link>
+            ))}
         </div>
         {width < breakpoints.md && (
-          <button className="btn btn-secondary" onClick={handleNextClick} disabled={activeGroupIndex === linkGroups.length - 1}>
+          <button
+            className="btn btn-secondary"
+            onClick={handleNextClick}
+            disabled={activeGroupIndex === linkGroups.length - 1}
+          >
             &gt;
           </button>
         )}
@@ -82,18 +94,34 @@ export const ServicesNavbar = () => {
   );
 };
 
-
-
 const SidebarNavbar = () => {
   return (
-   
-    <Nav className=" sidebar " >
-        <Nav.Link className='nav-link text-dark' style={{backgroundColor:'#E5F1FF', fontWeight:'500'}}>Services</Nav.Link>
-        <Nav.Link to='/milling' className='nav-link text-dark'>Milling</Nav.Link>
-        <Nav.Link  to='/hydration' className='nav-link text-dark'>Hydration</Nav.Link>
-        <Nav.Link  to='/packaging' className='nav-link text-dark'>Packaging</Nav.Link>
-        <Nav.Link  to='/machinery' className='nav-link text-dark'>Machinery</Nav.Link>
-        <Nav.Link  to='/dry-products' className='nav-link text-dark'>Dry products</Nav.Link>
+    <Nav className=" sidebar " id="navbar-example2">
+      <Nav.Link
+        className="nav-link text-dark"
+        style={{ backgroundColor: "#E5F1FF", fontWeight: "500" }}
+      >
+        Services
+      </Nav.Link>
+      <Nav.Link href="#scrollspyHeading1" className="nav-link text-dark">
+        Prepping
+      </Nav.Link>
+      <Nav.Link href="#scrollspyHeading1" className="nav-link text-dark">
+        Milling
+      </Nav.Link>
+      <Nav.Link href="#scrollspyHeading2" className="nav-link text-dark">
+        Dehydration
+      </Nav.Link>
+      <Nav.Link href="#scrollspyHeading3" className="nav-link text-dark">
+        Packaging
+      </Nav.Link>
+      <Nav.Link
+        className="nav-link text-dark"
+        href="https://sandbox-flw-web-v3.herokuapp.com/store/thepostharvestcentre"
+        target="blank"
+      >
+        Marketplace
+      </Nav.Link>
     </Nav>
   );
 };

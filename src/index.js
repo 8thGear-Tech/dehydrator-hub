@@ -9,11 +9,21 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./assets/styles/styles.min.css";
 import "./assets/styles/styles.css";
 import reportWebVitals from "./reportWebVitals";
+import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  // You can customize your theme here
+});
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+     <ThemeProvider theme={theme}>
+     <App />
+     </ThemeProvider>
+  
   </React.StrictMode>
 );
 

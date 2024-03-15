@@ -10,8 +10,10 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/Faq";
 import Blog from "./pages/Blog";
 import BlogContent from "./pages/BlogContent";
-import Machinery from "./pages/Machinery";
+
 import Product from "./pages/Product";
+import ProduceForm from "./pages/ProduceForm";
+import MachineryForm from "./pages/MachineryForm";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/form/produce" element={<ProduceForm />} />
+      <Route path="/form/machinery" element={<MachineryForm />} />
       <Route path="/blog-content/:blogId" element={<BlogContent />} />
       <Route path="/product/:productId" element={<Product />} />
         </Routes></BrowserRouter>

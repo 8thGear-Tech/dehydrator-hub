@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { millableProducts, dehydrationMachine, hydrationProducts } from '../data';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import GuestNavbar from '../components/Navbar/Navbar';
@@ -23,7 +23,7 @@ const Product = () => {
     const [images, setImages] = useState([]);
     const [relatedProducts, setRelatedProducts] = useState([]);
     const [selectedButton, setSelectedButton] = useState(0);
-      
+      const navigate = useNavigate()
    
   useEffect(() => {
     // Extracting category and id from productId
@@ -214,7 +214,7 @@ const Product = () => {
                 <h6 className='my-auto' style={{color:'#8B96A5'}}> {product?.shipping} shipping only</h6>
             </div>
            </div>
-           <Button className='btn-primary w-100'>Send inquiry</Button>
+           <Button className='btn-primary w-100' onClick={()=> navigate('/form/produce')}>Send inquiry</Button>
              </div>
              <div className='my-4 d-flex gap-2 align-items-center text-center justify-content-center'>
                 <i className='bi bi-heart' style={{color:'#81AC29', fontSize:'1rem'}}></i>
