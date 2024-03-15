@@ -41,13 +41,13 @@ const carouselHero= [
 ]
 
 const containerStyle = {
-  width: '100%',
-  height: '355px'
+  width: "100%",
+  height: "355px",
 };
 
 const center = {
-  lat: 9.0820,
-  lng: 8.6753
+  lat: 9.082,
+  lng: 8.6753,
 };
 const options = {
   restriction: {
@@ -64,10 +64,10 @@ const options = {
 const Home = () => {
   const navigate = useNavigate();
   function handleProductClick(productId, category) {
-  console.log(category, productId);
+    console.log(category, productId);
     navigate(`/product/${category}-${productId}`);
   }
-  
+
   return (
     <div>
       <GuestNavbar/>
@@ -118,9 +118,9 @@ const Home = () => {
         </div>
         
         </section>
-        <section className='my-3 my-md-5 py-5 px-lg-5'>
-          <Card className='border-0'>
-            <Card.Img src={hero2} alt='hero1' style={{height:'345px'}}/>
+        <section className="my-3 my-md-5 py-5 px-lg-5">
+          <Card className="border-0">
+            <Card.Img src={hero2} alt="hero1" style={{ height: "345px" }} />
 
             <Card.ImgOverlay className='px-3 py-5 px-md-5' style={{maxWidth:'37rem', color:'#ffffff'}}>
               <h1 style={{ color:'#ffffff'}}>An easy way to get your machines listed for producers</h1>
@@ -132,35 +132,38 @@ const Home = () => {
             </Card.ImgOverlay>
           </Card>
         </section>
-       
-        <section className='my-3 my-md-5 py-lg-4'>
-          
-          <Card className='border-0 my-3' style={{background:'#000000', borderRadius:'15px'}}>
-            
 
-            <Row className='px-3 py-5 px-md-5 align-items-center'>
-              
-              <Col xs={12} md={7} className='mb-3' >
-                <h2 className='mb-3 text-white'>We love your feedback</h2>
-                <h5 className='text-white' style={{fontWeight:'400'}}>Dehydrator Hub is built on the back of excellent customer service and delivery to our customers. In order to improve our delivery to you, please share your feedback. We need to know what works. </h5>
-
+        <section className="my-3 my-md-5 py-lg-4">
+          <Card
+            className="border-0 my-3"
+            style={{ background: "#000000", borderRadius: "15px" }}
+          >
+            <Row className="px-3 py-5 px-md-5 align-items-center">
+              <Col xs={12} md={7} className="mb-3">
+                <h2 className="mb-3 text-white">We love your feedback</h2>
+                <h5 className="text-white" style={{ fontWeight: "400" }}>
+                  Dehydrator Hub is built on the back of excellent customer
+                  service and delivery to our customers. In order to improve our
+                  delivery to you, please share your feedback. We need to know
+                  what works.{" "}
+                </h5>
               </Col>
-              <Col xs={12} md={5}><Card className='d-flex flex-column gap-3 border-0 p-4' >
-              <h5>Give us your feedback</h5>
-              <textarea rows={2} placeholder='Type more details'></textarea>
-              <div className='mb-5'>
-              <Button className='btn-primary'>Submit</Button>
-              </div>
-              
-              </Card></Col>
-              
+              <Col xs={12} md={5}>
+                <Card className="d-flex flex-column gap-3 border-0 p-4">
+                  <h5>Give us your feedback</h5>
+                  <textarea rows={2} placeholder="Type more details"></textarea>
+                  <div className="mb-5">
+                    <Button className="btn-primary">Submit</Button>
+                  </div>
+                </Card>
+              </Col>
             </Row>
           </Card>
         </section>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

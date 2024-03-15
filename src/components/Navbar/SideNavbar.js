@@ -1,18 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-
+import React, { useRef, useState, useEffect } from "react";
+import { Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
-  { id: 1, title: 'Services', url: '/services' },
-  { id: 2, title: 'Milling', url: '/milling' },
-  { id: 3, title: 'Hydration', url: '/hydration' },
-  { id: 4, title: 'Packaging', url: '/packaging' },
-  { id: 5, title: 'Machinery', url: '/machinery' },
-  { id: 6, title: 'Dry products', url: '/dry-products' },
- 
+  { id: 1, title: "Services", url: "/services" },
+  { id: 2, title: "Milling", url: "/milling" },
+  { id: 3, title: "Hydration", url: "/hydration" },
+  { id: 4, title: "Packaging", url: "/packaging" },
+  { id: 5, title: "Machinery", url: "/machinery" },
+  { id: 6, title: "Dry products", url: "/dry-products" },
 ];
-
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
@@ -26,8 +23,8 @@ const useWindowSize = () => {
       });
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowSize;
@@ -60,20 +57,35 @@ export const ServicesNavbar = () => {
   };
 
   return (
-    <Navbar className='px-3 px-md-5 py-1 py-3'>
+    <Navbar className="px-3 px-md-5 py-1 py-3">
       <Nav className="d-flex align-items-center">
         {width < breakpoints.md && (
-          <button className="btn btn-secondary" onClick={handlePrevClick} disabled={activeGroupIndex === 0}>
+          <button
+            className="btn btn-secondary"
+            onClick={handlePrevClick}
+            disabled={activeGroupIndex === 0}
+          >
             &lt;
           </button>
         )}
         <div className="navbar-nav flex-row overflow-auto">
-          {linkGroups[activeGroupIndex] && linkGroups[activeGroupIndex].map((link) => (
-            <Nav.Link href={link.url} className='nav-link text-dark' key={link.id}>{link.title}</Nav.Link>
-          ))}
+          {linkGroups[activeGroupIndex] &&
+            linkGroups[activeGroupIndex].map((link) => (
+              <Nav.Link
+                href={link.url}
+                className="nav-link text-dark"
+                key={link.id}
+              >
+                {link.title}
+              </Nav.Link>
+            ))}
         </div>
         {width < breakpoints.md && (
-          <button className="btn btn-secondary" onClick={handleNextClick} disabled={activeGroupIndex === linkGroups.length - 1}>
+          <button
+            className="btn btn-secondary"
+            onClick={handleNextClick}
+            disabled={activeGroupIndex === linkGroups.length - 1}
+          >
             &gt;
           </button>
         )}
@@ -81,8 +93,6 @@ export const ServicesNavbar = () => {
     </Navbar>
   );
 };
-
-
 
 const SidebarNavbar = () => {
   return (
@@ -96,6 +106,7 @@ const SidebarNavbar = () => {
         <Nav.Link  href="#scrollspyHeading4" className='nav-link text-dark'>Packaging</Nav.Link>
         <Nav.Link  className='nav-link text-dark'>Repairs</Nav.Link>
         <Nav.Link  className='nav-link text-dark'>Training & certifications</Nav.Link>
+       
        
     </Nav>
   );
