@@ -595,7 +595,7 @@ export const hydrationProducts = [
             id:2,
             productImage:vegetables,
             productPictures:[vegetables, vegetables,vegetables, vegetables, vegetables],
-             productName:'Vegetables (Peppers, Tomatoes,Onions,Garli',
+             productName:'Vegetables (Peppers, Tomatoes,Onions,Garlic',
         productPrice1kg:99.50,
         productOldPrice:1128.00,
         productDescription:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',

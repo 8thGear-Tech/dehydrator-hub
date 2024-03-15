@@ -85,7 +85,7 @@ const Home = () => {
                   <Card.Img src={product.productImage} />
                 </div>
                 <Card.Body className='py-2'>
-                  <div className='d-flex justify-content-between align-items-center'>
+                  <div className='d-flex flex-wrap'>
                     
                       <h5 style={{color:'#1C1C1C'}}>{product.productName}</h5>
                     </div>
@@ -115,7 +115,7 @@ const Home = () => {
                   <Card.Img src={product.productImage} />
                 </div>
                 <Card.Body className='py-2'>
-                  <div className='d-flex justify-content-between align-items-center'>
+                  <div className='d-flex flex-wrap'>
                     
                       <h5 style={{color:'#1C1C1C'}}>{product.productName}</h5>
                     </div>
@@ -150,7 +150,7 @@ const Home = () => {
                 <Col xs={6} >
                   <div className='d-flex flex-column gap-0 my-3 my-sm-5 py-0 py-sm-5 py-md-0 py-lg-5 h-100'>
                   <h4 className='mt-3 mt-sm-0'style={{fontWeight:'600', color:'#1C1C1C'}}>{product.productType}</h4>
-                  {product.productPrice && <h4 className='p-3 align-items-center text-center my-4' style={{backgroundColor:'#FFF0DF', color:'#FA3434', fontWeight:'600', width:'145px'}}>N{product.productPrice}/kg</h4>}
+                  {product.productPrice && <h4 className='py-3 align-items-center text-center my-4 price' style={{backgroundColor:'#FFF0DF', color:'#FA3434', fontWeight:'600'}}>N{product.productPrice}/kg</h4>}
           
           
 

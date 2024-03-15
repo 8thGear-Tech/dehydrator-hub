@@ -12,7 +12,7 @@ const Footer = () => {
             <Col xs={12} sm={6} md={4} className='d-flex flex-column gap-3 text-white pe-3 mb-4'>
             <img src={logo} style={{width:'100px'}}/>
             <h6 className='text-white'>Dehydrator Hub is a vital solution addressing post-harvest loss in Nigeria's agriculture space by connecting producers with processors and processing machinery. </h6>
-            <h6 className='text-white'>@Company.com</h6>
+            <a href='mailto:dehydratorhub@gmail.com' className='text-white text-decoration-none'>dehydratorhub@gmail.com</a>
             </Col>
             <Col xs={12} sm={6} md={2} className='mb-4'>
                 <h6 className='mb-3 text-white' style={{fontWeight:'600', cursor:'pointer'}} onClick={()=> navigate('/about-us')}>About us</h6>
@@ -27,7 +27,7 @@ const Footer = () => {
             <Col xs={12} sm={6} md={3} className='d-flex flex-column gap-3 mb-4'>
             <h6 className='text-white' style={{fontWeight:'600', cursor:'pointer'}} onClick={()=> navigate('/contact')}>Contact us</h6>
             <h6 className='text-white'>38 Cipm Ave, Alausa, Ikeja 101233, Lagos </h6>
-            <h6 className='text-white'>08085554485</h6>
+            <a href='tel:08085554485' className='text-white text-decoration-none'>08085554485</a>
             </Col>
             <Col xs={12} sm={6} md={3} className='d-flex align-items-end gap-3 mb-4'>
                 

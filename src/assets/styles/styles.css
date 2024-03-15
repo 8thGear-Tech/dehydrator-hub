@@ -362,4 +362,13 @@ body {
   background-color: #ffffff;
   border: none;
 }
+
+.price {
+  width: 145px;
+}
+@media (max-width: 768px) {
+  .price {
+    width: 110px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

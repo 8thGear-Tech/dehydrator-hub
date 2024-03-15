@@ -21,3 +21,11 @@
   background-color: #ffffff;
   border:none;
 }
+
+.price{
+  width: 145px;
+
+  @media (max-width: 768px) {
+    width: 110px;
+  }
+}
