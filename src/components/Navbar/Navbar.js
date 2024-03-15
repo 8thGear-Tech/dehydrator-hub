@@ -53,7 +53,13 @@ const GuestNavbar = () => {
             101233, Lagos
           </div>
           <div className="align-items-center">
-            <i className="bi bi-telephone-fill"></i> +2348085554485
+            <i className="bi bi-telephone-fill"></i>{" "}
+            <a
+              href="tel:08085554485"
+              className="text-dark text-decoration-none"
+            >
+              08085554485
+            </a>
           </div>
         </div>
       </Navbar>

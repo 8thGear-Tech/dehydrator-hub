@@ -23,7 +23,12 @@ const Footer = () => {
             Nigeria's agriculture space by connecting producers with processors
             and processing machinery.{" "}
           </h6>
-          <h6 className="text-white">dehydratorhub@gmail.com</h6>
+          <a
+            href="mailto:dehydratorhub@gmail.com"
+            className="text-white text-decoration-none"
+          >
+            dehydratorhub@gmail.com
+          </a>
         </Col>
         <Col xs={12} sm={6} md={2} className="mb-4">
           <h6
@@ -34,25 +39,21 @@ const Footer = () => {
             About us
           </h6>
           <div className="d-flex flex-column gap-1">
-            <h6
+            {/* <h6
               className="text-white"
               style={{ cursor: "pointer" }}
               onClick={() => navigate("/")}
             >
               Services
-            </h6>
+            </h6> */}
             <h6
               style={{ cursor: "pointer" }}
               className="text-white"
-              onClick={() =>
-                navigate(
-                  "https://sandbox-flw-web-v3.herokuapp.com/store/thepostharvestcentre"
-                )
-              }
+              onClick={() => navigate("/")}
             >
               MarketPlace
             </h6>
-            <h6
+            {/* <h6
               style={{ cursor: "pointer" }}
               className="text-white"
               onClick={() => navigate("/faq")}
@@ -65,7 +66,7 @@ const Footer = () => {
               className="text-white"
             >
               Blog
-            </h6>
+            </h6> */}
           </div>
         </Col>
         <Col xs={12} sm={6} md={3} className="d-flex flex-column gap-3 mb-4">
@@ -79,7 +80,9 @@ const Footer = () => {
           <h6 className="text-white">
             38 Cipm Ave, Alausa, Ikeja 101233, Lagos{" "}
           </h6>
-          <h6 className="text-white">08085554485</h6>
+          <a href="tel:08085554485" className="text-white text-decoration-none">
+            08085554485
+          </a>
         </Col>
         <Col
           xs={12}

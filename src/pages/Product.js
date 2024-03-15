@@ -359,14 +359,14 @@ const Product = () => {
  
  
  </Col>
- <Col aria-modal={3} className='d-none d-md-flex'>
+ <Col md={3} className='d-none d-md-block'>
  <div className="related-products px-2 py-3" style={{border:'1px solid #DEE2E7',borderRadius:'5px'}}>
         <h6 className='mb-3' style={{fontWeight:'600'}}>You may like</h6>
         <div >
           {relatedProducts.map((prod) => (
           
-                <Row className='mb-3 g-2'>
-              <Col xs={5}className=' h-100' >
+                <Row className='mb-3 g-0' key={prod.id}>
+              <Col md={5}className=' h-100' >
                 <Card className='p-2 h-100' style={{border:'1px solid #DEE2E7',borderRadius:'5px'}}><img src={prod.productImage} style={{}} /></Card>
                 
                 
@@ -375,8 +375,8 @@ const Product = () => {
                   {/* Other product details */}
               
               </Col>
-              <Col xs={7}>
-              <p style={{color:'#505050', fontWeight:'600'}} className='word-wrap'>{prod.productName}</p>
+              <Col md={7} className='px-2'>
+              <p style={{color:'#505050', fontWeight:'600'}} className='d-flex flex-wrap mb-0'>{prod.productName}</p>
                   <p style={{color:'#8B96A5'}}>${prod.productPrice1kg}</p>
               </Col>
               </Row>
@@ -389,7 +389,7 @@ const Product = () => {
          </div>
          <div className="related-products p-3" style={{border:'1px solid #DEE2E7',borderRadius:'5px'}}>
         <h4 className='mb-4' style={{fontWeight:'600'}}>Related Products</h4>
-        <Row>
+        <Row className='g-3'>
           {relatedProducts.map((prod) => (
             <Col key={prod.id} xs={6} sm={6} md={4} lg={2} className='mb-3'>
               <Card className='h-100'>

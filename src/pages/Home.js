@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import SidebarNavbar from "../components/Navbar/SideNavbar";
 import { ServicesNavbar } from "../components/Navbar/SideNavbar";
 import { useNavigate } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const containerStyle = {
@@ -65,8 +65,12 @@ const Home = () => {
 
                 <Card.ImgOverlay className="px-3 py-5 px-md-5">
                   <h3>Lets process your produce and</h3>
-                  <h1>convert them into valuable products</h1>
-                  <Button variant="light" className="my-4 px-3">
+                  <h1>convert them into valuable food products</h1>
+                  <Button
+                    variant="light"
+                    className="my-4 px-3"
+                    href="/about-us"
+                  >
                     {" "}
                     Learn more
                   </Button>
@@ -119,7 +123,7 @@ const Home = () => {
                         <Card.Img src={product.productImage} />
                       </div>
                       <Card.Body className="py-2">
-                        <div className="d-flex justify-content-between align-items-center">
+                        <div className="d-flex flex-wrap">
                           <h5 style={{ color: "#1C1C1C" }}>
                             {product.productName}
                           </h5>
@@ -172,7 +176,7 @@ const Home = () => {
                         <Card.Img src={product.productImage} />
                       </div>
                       <Card.Body className="py-2">
-                        <div className="d-flex justify-content-between align-items-center">
+                        <div className="d-flex flex-wrap">
                           <h5 style={{ color: "#1C1C1C" }}>
                             {product.productName}
                           </h5>
@@ -229,12 +233,11 @@ const Home = () => {
                           </h4>
                           {product.productPrice && (
                             <h4
-                              className="p-3 align-items-center text-center my-4"
+                              className="py-3 align-items-center text-center my-4 price"
                               style={{
                                 backgroundColor: "#FFF0DF",
                                 color: "#FA3434",
                                 fontWeight: "600",
-                                width: "145px",
                               }}
                             >
                               N{product.productPrice}/kg
@@ -266,7 +269,7 @@ const Home = () => {
           <h2 className="my-5">Locations where our listed machines are</h2>
           <div className="">
             <LoadScript
-              googleMapsApiKey="AIzaSyDAgwgCtBfG0pHN002HB7Fh-ZrBB0VEhUA" // Replace with your API key
+              googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
             >
               <GoogleMap
                 mapContainerStyle={containerStyle}
