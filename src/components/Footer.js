@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import logo from "../assets/images/dehydrator-logo.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -24,16 +24,41 @@ const Footer = () => {
             and processing machinery.{" "}
           </h6>
           <a
-            href="mailto:dehydratorhub@gmail.com"
+            href="mailto:orders@dehydratorhub.com"
             className="text-white text-decoration-none"
           >
-            dehydratorhub@gmail.com
+            orders@dehydratorhub.com
           </a>
         </Col>
         <Col xs={12} sm={6} md={2} className="mb-4">
           <h6
             className="mb-3 text-white"
-            style={{ fontWeight: "600", cursor: "pointer" }}
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/about-us")}
+          >
+            Home
+          </h6>
+          <h6
+            style={{ cursor: "pointer" }}
+            className=" mb-3 text-white"
+            onClick={() => navigate("/")}
+          >
+            Processing Services
+          </h6>
+          <h6 style={{ cursor: "pointer" }} className="mb-3 text-white">
+            <Link
+              className="text-decoration-none text-white"
+              to="https://sandbox-flw-web-v3.herokuapp.com/store/thepostharvestcentre"
+              target="_blank"
+            >
+              {" "}
+              Marketplace
+            </Link>
+          </h6>
+          <h6
+            className="mb-3 text-white"
+            style={{ cursor: "pointer" }}
+            // style={{ fontWeight: "600", cursor: "pointer" }}
             onClick={() => navigate("/about-us")}
           >
             About us
@@ -46,13 +71,7 @@ const Footer = () => {
             >
               Services
             </h6> */}
-            <h6
-              style={{ cursor: "pointer" }}
-              className="text-white"
-              onClick={() => navigate("/")}
-            >
-              MarketPlace
-            </h6>
+
             {/* <h6
               style={{ cursor: "pointer" }}
               className="text-white"

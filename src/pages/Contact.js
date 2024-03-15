@@ -65,7 +65,7 @@ const Contact = () => {
           <div className="col-12 col-md-4 d-flex gap-3 my-3 py-2 py-md-0">
             <i className="bi bi-geo-alt-fill"></i>
             <h5 style={{ fontWeight: "300" }}>
-              38 CIPM Ave, Alausa, Ikeja Cipm Ave, Alausa, Ikeja 101233, Lagos
+              38 CIPM Ave, Alausa, Ikeja 101233, Lagos
             </h5>
           </div>
         </div>
@@ -87,12 +87,12 @@ const Contact = () => {
             className="d-none d-md-flex  position-absolute"
             style={{ bottom: "0%", left: "-6%" }}
           />
-          <div className="text-center mb-5">
+          {/* <div className="text-center mb-5">
             <h2 style={{ fontWeight: "400" }}>Say hello</h2>
             <p className="my-2" style={{ color: "#777777" }}>
               Lorem Ipsum is simply dummy text of the printing .
             </p>
-          </div>
+          </div> */}
 
           <Form className="my-5 mx-auto" style={{ maxWidth: "40rem" }}>
             <Row>

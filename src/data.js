@@ -69,7 +69,7 @@ export const testimonials = [
     imgSrc: testimony,
     quote:
       "Funmi is the surest plug, my business support partner and friend of over 2 decades too. Best girly",
-    name: "Bonis Food Market, Nigeria.",
+    name: "Bonics Food Market, Nigeria.",
   },
   // Add more testimonials as needed
 ];

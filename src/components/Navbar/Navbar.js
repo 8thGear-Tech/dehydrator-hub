@@ -16,7 +16,7 @@ const GuestNavbar = () => {
         >
           <div className="d-flex gap-3 gap-sm-5" style={{ fontSize: "10px" }}>
             <div className="align-items-center">
-              <i className="bi bi-geo-alt-fill"></i> 38 Cipm Ave, Alausa, Ikeja
+              <i className="bi bi-geo-alt-fill"></i> 38 CIPM Ave, Alausa, Ikeja
               101233, Lagos
             </div>
             <div className="align-items-center">
@@ -49,7 +49,7 @@ const GuestNavbar = () => {
       >
         <div className="d-flex gap-3 gap-sm-5" style={{ fontSize: "10px" }}>
           <div className="align-items-center">
-            <i className="bi bi-geo-alt-fill"></i> 38 Cipm Ave, Alausa, Ikeja
+            <i className="bi bi-geo-alt-fill"></i> 38 CIPM Ave, Alausa, Ikeja
             101233, Lagos
           </div>
           <div className="align-items-center">

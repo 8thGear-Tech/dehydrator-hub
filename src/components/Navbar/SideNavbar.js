@@ -96,7 +96,7 @@ export const ServicesNavbar = () => {
 
 const SidebarNavbar = () => {
   return (
-    <Nav className=" sidebar " id="navbar-example2">
+    <Nav className="sidebar" id="navbar-example2">
       <Nav.Link
         className="nav-link text-dark"
         style={{ backgroundColor: "#E5F1FF", fontWeight: "500" }}
