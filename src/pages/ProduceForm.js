@@ -143,12 +143,12 @@ const handleMultipleProduceChange = (e) => {
         </div>
       </div>
          <Form.Group className='mb-3'>
-          <Form.Label style={{color:'#242426'}}>Produce</Form.Label>
+          <Form.Label style={{color:'#242426'}}>Produce <sup className='text-danger'>*</sup></Form.Label>
           <Form.Control type='text' name='produce' value={formState.singleProduce.produce}
           onChange={handleSingleProduceChange} required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
         </Form.Group>
         <Form.Group className='mb-3'>
-  <Form.Label style={{color:'#242426'}}>Weight</Form.Label>
+  <Form.Label style={{color:'#242426'}}>Weight <sup className='text-danger'>*</sup></Form.Label>
   
   <div className="d-flex flex-column gap-2 mt-2">
     {["1-5kg", "6-10kg", "I am not sure"].map((weightOption) => (
@@ -168,7 +168,7 @@ const handleMultipleProduceChange = (e) => {
 </Form.Group>
 
         <Form.Group className='mb-3'>
-          <Form.Label style={{color:'#242426'}}>Which of our services are you requesting</Form.Label>
+          <Form.Label style={{color:'#242426'}}>Which of our services are you requesting? <sup className='text-danger'>*</sup></Form.Label>
           <div className="d-flex flex-column gap-2">
             {['Prepping','Milling','Dehydration','Packaging','Sales on our ecommerce'].map((service)=>(
                 <Form.Check
@@ -186,7 +186,7 @@ const handleMultipleProduceChange = (e) => {
               </div>
                 </Form.Group>
                 <Form.Group className='mb-3'>
-          <Form.Label style={{color:'#242426'}}>Do you have multiple produce to process</Form.Label>
+          <Form.Label style={{color:'#242426'}}>Do you have multiple produce to process? <sup className='text-danger'>*</sup></Form.Label>
         <div className=" d-flex flex-column gap-2">
                   <Form.Check
                     variant="primary"
@@ -263,8 +263,8 @@ const handleMultipleProduceChange = (e) => {
         return (
           <>
            <div className=' mb-5'>
-          <h2 className='mb-2'style={{fontFamily:'Outfit'}}>Pick up Location</h2>
-          <h6 style={{fontFamily:'Outfit', color:'#575F6E'}}  className='mb-4'>We would love to know your preference for pickup</h6>
+          <h2 className='mb-2'style={{fontFamily:'Outfit'}}>Pick up Location </h2>
+          <h6 style={{fontFamily:'Outfit', color:'#575F6E'}}  className='mb-4'>We would love to know your preference for pickup <sup className='text-danger'>*</sup></h6>
           </div>
           
          
@@ -292,7 +292,7 @@ const handleMultipleProduceChange = (e) => {
                   </Form.Group>
   
                   <Form.Group className='mb-3'>
-            <Form.Label style={{color:'#242426'}}>Home Address</Form.Label>
+            <Form.Label style={{color:'#242426'}}>Home Address <sup className='text-danger'>*</sup></Form.Label>
             <Form.Control type='text' name='homeAddress' value={formState.homeAddress}
             onChange={handleChange} required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
              
@@ -305,7 +305,7 @@ const handleMultipleProduceChange = (e) => {
           <>
            <div className=' mb-5'>
           <h2 className='mb-2'style={{fontFamily:'Outfit'}}>Drop-off  Location</h2>
-          <h6 style={{fontFamily:'Outfit', color:'#575F6E'}}  className='mb-4'>We would love to know your preference for drop-off</h6>
+          <h6 style={{fontFamily:'Outfit', color:'#575F6E'}}  className='mb-4'>We would love to know your preference for drop-off <sup className='text-danger'>*</sup></h6>
           </div>
           
          
@@ -343,18 +343,18 @@ const handleMultipleProduceChange = (e) => {
          
         </div>
            <Form.Group className='mb-4'>
-            <Form.Label style={{color:'#575F6E'}}>Name</Form.Label>
+            <Form.Label style={{color:'#575F6E'}}>Name <sup className='text-danger'>*</sup></Form.Label>
             <Form.Control type='text' name='name'style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}  value={formState.name}
   onChange={handleChange}/>
           </Form.Group>
           <Form.Group className='mb-4'>
-            <Form.Label style={{color:'#575F6E'}}>Email </Form.Label>
+            <Form.Label style={{color:'#575F6E'}}>Email <sup className='text-danger'>*</sup></Form.Label>
             <Form.Control type='email' name='email' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}  value={formState.email}
   onChange={handleChange} />
           </Form.Group>
           
           <Form.Group className='mb-4'>
-            <Form.Label style={{color:'#575F6E'}}>Phone number</Form.Label>
+            <Form.Label style={{color:'#575F6E'}}>Phone number <sup className='text-danger'>*</sup></Form.Label>
             <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='phoneNumber'  value={formState.phoneNumber}
   onChange={handleChange}/>
           </Form.Group>
@@ -370,7 +370,7 @@ const handleMultipleProduceChange = (e) => {
 const ProduceForm = () => {
   const theme = useTheme();
   const [showModal, setShowModal] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(false);
+  
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [isSuccessful, setIsSuccessful] = useState(false);
