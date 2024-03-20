@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import logo from "../../assets/images/dehydrator-logo.svg";
 
 const GuestNavbar = () => {
@@ -62,31 +62,71 @@ const GuestNavbar = () => {
             </a>
           </div>
         </div>
+      </Navbar>
+      <Navbar
+        expand="lg"
+        style={{
+          background:
+            "linear-gradient(90.05deg, #81AC29 -5.66%, #567904 115.63%)",
+          color: "#ffffff",
+        }}
+        className="px-3 px-md-5 guest-navbar"
+      >
+        <Navbar.Brand className="ms-0 ms-lg-4">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img src={logo} />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarSupportedContent" />
+        <Navbar.Collapse id="navbarSupportedContent">
+          <Nav className="ms-auto d-flex gap-3 gap-xl-5 gap-xxl-5 me-lg-4 me-0">
+            <NavLink activeclassname="active" className="nav-link" to="/">
+              Home
+            </NavLink>
+            {/* <NavLink
+              activeclassname="active"
+              className="nav-link"
+              to="/services"
+            >
+              Processing Services
+            </NavLink> */}
+            <NavDropdown title="Processing" id="basic-nav-dropdown">
+              <NavDropdown.Item as={NavLink} to="/services">
+                Services
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" target="_blank">
+                Equipment Repairs
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" target="_blank">
+                Trainings and Certifications
+              </NavDropdown.Item>
+              {/* Add more items as needed */}
+            </NavDropdown>
+            <Nav.Link
+              className="nav-link"
+              href="https://sandbox-flw-web-v3.herokuapp.com/store/thepostharvestcentre"
+              target="blank"
+            >
+              Marketplace
+            </Nav.Link>
+            <NavLink
+              activeclassname="active"
+              className="nav-link"
+              to="/about-us"
+            >
+              About us
+            </NavLink>
 
-
-     </Navbar>
-     <Navbar expand="lg" style={{background:'linear-gradient(90.05deg, #81AC29 -5.66%, #567904 115.63%)', color:'#ffffff'}} className='px-3 px-md-5 guest-navbar'>
-     <Navbar.Brand className='ms-0 ms-lg-4'>
-        <Link to='/'  style={{textDecoration:'none'}}>
-        <img src={logo}/>
-        </Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarSupportedContent" />
-      <Navbar.Collapse id="navbarSupportedContent" >
-        <Nav className="ms-auto d-flex gap-3 gap-xl-5 gap-xxl-5 me-lg-4 me-0">
-        <NavLink activeclassname='active' className='nav-link' to="/">Home</NavLink>
-        <NavLink activeclassname='active' className='nav-link' to="/services">Processing Services</NavLink>
-        <Nav.Link  className='nav-link' href="https://sandbox-flw-web-v3.herokuapp.com/store/thepostharvestcentre"
-        target="blank">Marketplace</Nav.Link>
-        <NavLink activeclassname='active' className='nav-link' to="/about-us">About us</NavLink>
-        
-        {/* <NavLink activeclassname='active' className='nav-link' to="/blog">Blog</NavLink> */}
-        <Button className='btn-secondary' onClick={()=> navigate('/contact')}>Contact us</Button>
-        </Nav>
-       
-      </Navbar.Collapse>
-
-     </Navbar>
+            {/* <NavLink activeclassname='active' className='nav-link' to="/blog">Blog</NavLink> */}
+            <Button
+              className="btn-secondary"
+              onClick={() => navigate("/contact")}
+            >
+              Contact us
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   );
 };

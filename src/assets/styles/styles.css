@@ -387,4 +387,26 @@ body {
 .home-section .carousel-indicators {
   display: none;
 }
+
+/* CSS */
+.dropdown-item {
+  color: #000000 !important; /* Black text color */
+}
+
+.dropdown-item:hover {
+  background-color: #f0edf4 !important; /* Retain transparent background color on hover */
+}
+
+.dropdown-item.active {
+  background-color: #f0edf4 !important; /* Grey background color when item is active */
+  color: #000000 !important;
+}
+
+.navbar-nav .show > .nav-link {
+  background-color: transparent !important; /* Retain transparent background color when dropdown is open */
+}
+
+#basic-nav-dropdown {
+  color: #fff !important;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -21,27 +21,22 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 const carouselHero = [
   {
     id: 1,
-    text: "Lets process your produce and",
-    title: "convert them into valuable food products",
-    image: hero1,
-  },
-  {
-    id: 2,
     text: "Food Processing",
     title: "Prepping, Milling, Dehydration, Oil Extraction, Packaging",
     image: hero1,
   },
+
+  { id: 2, text: "Processing", title: "Equipment Repairs", image: hero1 },
   {
     id: 3,
-    text: "Marketplace",
-    title: "Food Equipment & Processed Products",
+    text: "Processing",
+    title: "Trainings & Certifications",
     image: hero1,
   },
-  { id: 4, text: "Repairs", title: "Lorem ipsum dolor ipsum", image: hero1 },
   {
-    id: 5,
-    text: "Trainings & Certifications",
-    title: "Lorem ipsum dolor ipsum",
+    id: 4,
+    text: "Marketplace",
+    title: "Food Equipment & Processed Products",
     image: hero1,
   },
 ];
