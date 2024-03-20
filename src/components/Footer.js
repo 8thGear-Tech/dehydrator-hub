@@ -109,10 +109,12 @@ const Footer = () => {
           md={3}
           className="d-flex align-items-end gap-3 mb-4"
         >
-          <i className="bi bi-facebook px-1 social-icon"></i>
-          <i className="bi bi-instagram px-1 social-icon"></i>
-          <i className="bi bi-twitter px-1 social-icon"></i>
-          <i className="bi bi-linkedin px-1 social-icon"></i>
+          <a href="https://www.facebook.com/p/fooddehydratorng-100037323050125/" className="text-decoration-none text-dark social-icon">
+          <i className="bi bi-facebook px-1 "></i>
+          </a>
+          <a href="https://www.instagram.com/food.dehydrator.ng/" className="text-decoration-none text-dark social-icon"><i className="bi bi-instagram px-1 "></i></a> 
+          <a href="https://x.com/DehydratorHub?t=DQVIm13KGZebctSef9z1Kg&s=08" className="text-decoration-none text-dark social-icon"><i className="bi bi-twitter px-1 "></i></a> 
+          <a href="https://www.linkedin.com/company/dehydratorhub/" className="text-decoration-none text-dark social-icon"><i className="bi bi-linkedin px-1 "></i></a> 
         </Col>
       </Row>
       <div className="py-3 text-center text-white" style={{ fontSize: "13px" }}>

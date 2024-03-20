@@ -225,32 +225,32 @@ const About = () => {
           <Row className="my-5 mx-xl-5">
             <Col xs={6} md={4} className="mb-3">
               <Card
-                className="border-none p-3 justify-content-center text-center align-items-center"
-                style={{ background: "#F5F5F5", border: "none" }}
+                className="border-none p-3 "
+                style={{ background: "#F5F5F5", border: "none" , borderRadius:'20px'}}
               >
-                <Image fluid src={ceo} alt="" className="mb-2" />
-                <h5 style={{ fontWeight: "600" }}>Funmilayo Ishola</h5>
-                <h6 style={{ color: "#8B8B8B", fontWeight: "300" }}>CEO</h6>
+                <Image fluid src={ceo} alt="" className="mb-2 mx-0 px-0" />
+                <h5 className='justify-content-center text-center align-items-center'style={{ fontWeight: "600" }}>Funmilayo Ishola</h5>
+                <h6 className="justify-content-center text-center align-items-center" style={{ color: "#8B8B8B", fontWeight: "300" }}>CEO</h6>
               </Card>
             </Col>
             <Col xs={6} md={4} className="mb-3">
               <Card
-                className="border-none p-3 align-items-center justify-content-center text-center"
+                className="border-none p-3 "
                 style={{ background: "#F5F5F5", border: "none" }}
               >
                 <Image fluid src={user} alt="" className="mb-2" />
-                <h5 style={{ fontWeight: "600" }}>Name</h5>
-                <h6 style={{ color: "#8B8B8B", fontWeight: "300" }}>CMO</h6>
+                <h5 className='justify-content-center text-center align-items-center'style={{ fontWeight: "600" }}>Name</h5>
+                <h6 className="justify-content-center text-center align-items-center" style={{ color: "#8B8B8B", fontWeight: "300" }}>CMO</h6>
               </Card>
             </Col>
             <Col xs={6} md={4} className="mb-3">
               <Card
-                className="border-none p-3 align-items-center justify-content-center text-center"
+                className="border-none p-3 "
                 style={{ background: "#F5F5F5", border: "none" }}
               >
                 <Image fluid src={user} alt="" className="mb-2" />
-                <h5 style={{ fontWeight: "600" }}>Name</h5>
-                <h6 style={{ color: "#8B8B8B", fontWeight: "300" }}>C0O</h6>
+                <h5 className="justify-content-center text-center align-items-center"  style={{ fontWeight: "600" }}>Name</h5>
+                <h6 className="justify-content-center text-center align-items-center"  style={{ color: "#8B8B8B", fontWeight: "300" }}>C0O</h6>
               </Card>
             </Col>
             {/* <Col xs={6} md={3}>
