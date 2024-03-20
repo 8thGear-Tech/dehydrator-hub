@@ -17,10 +17,33 @@ const CustomStepIcon = styled('div')(({ theme, color }) => ({
   alignItems: 'center',
 }));
 
-const steps = ['Step 1', 'Step 2','Review & Submit'];
+const steps = ['Step 1', 'Step 2','Step 3','Step 4','Review & Submit'];
 
 // Example form fields for each step
 const StepContent = ({ step, formState, setFormState }) => {
+  const handleChange = (event) => {
+    const { name, value, type } = event.target;
+    if (type === 'text' || type === 'email') {
+      if (name === 'phoneNumber' || name === 'price') {
+        // Allow changes only if the value is a number
+        // For phoneNumber, additionally check if it's less than or equal to 11 characters
+        const regex = name === 'phoneNumber' ? /^\d{0,11}$/ : /^\d*$/; // For 'price', allow any length of digits
+        if (regex.test(value)) {
+          setFormState(prevState => ({
+            ...prevState,
+            [name]: value,
+          }));
+        }
+      } else {
+        // Handle other text and email inputs normally
+        setFormState(prevState => ({
+          ...prevState,
+          [name]: value,
+        }));
+      }
+    }
+  };
+  
   switch (step) {
     case 0:
       return (
@@ -31,51 +54,29 @@ const StepContent = ({ step, formState, setFormState }) => {
         <div className='d-flex gap-3 p-2 align-items-center' style={{backgroundColor:'#F0F2F4'}}>
             <img src={lock} alt='lock'/>
             <p className='my-auto' style={{fontSize:'13px',color:'#242426'}}>We take privacy issues seriously. You can be sure that your personal data is securely protected.</p>
-           <CloseButton/>
         </div>
       </div>
          <Form.Group className='mt-5 mb-4'>
-          <Form.Label style={{color:'#575F6E'}}>Do you have multiple products your machine process? List them here and use a comma (,) to separate them</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
+          <Form.Label style={{color:'#575F6E'}}>What produce does your machine process? 
+List them here and use a comma (,) to separate them</Form.Label>
+          <Form.Control type='text' required placeholder='e.g. grains'style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='produceList' value={formState.produceList} onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-4'>
           <Form.Label style={{color:'#242426'}}>Name of Machine</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='machineName' value={formState.machineName} onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-4'>
-          <Form.Label style={{color:'#242426'}}>Category</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
-           <div className=" d-flex flex-column gap-2 mt-2">
-                  <Form.Check
-                    variant="primary"
-                    label="Milling"
-                    type="radio"
-                    
-                   
-                  />
-                  <Form.Check
-                    variant="primary"
-                    label="Dehydrator"
-                    type="radio"
-                   
-                   
-                  />
-                  <Form.Check
-                    variant="primary"
-                    label="Milling"
-                    type="radio"
-                   
-                   
-                  />
-                  
-                   
-                  
-                  
-                </div>
+          <Form.Label style={{color:'#242426'}}>Category of processing your machine is capable of</Form.Label>
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} placeholder='e.g. milling, packaging, dehydrating' name='processingCategory' value={formState.processingCategory} onChange={handleChange}/>
+        
         </Form.Group>
         <Form.Group className='mb-4'>
-          <Form.Label style={{color:'#242426'}}>Power/IPC</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
+          <Form.Label style={{color:'#242426'}}>Power specifications</Form.Label>
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='powerSpecifications' value={formState.powerSpecifications} onChange={handleChange}/>
+        </Form.Group>
+        <Form.Group className='mb-4'>
+          <Form.Label style={{color:'#242426'}}>Voltage</Form.Label>
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='voltage' value={formState.voltage} onChange={handleChange}/>
         </Form.Group>
         </>
        
@@ -90,26 +91,57 @@ const StepContent = ({ step, formState, setFormState }) => {
         <h2 className=''style={{fontFamily:'Outfit'}}>Machine</h2>
        
       </div>
+      <Form.Group className='mb-4'>
+          <Form.Label style={{color:'#575F6E'}}> Machine Size</Form.Label>
+          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='machineSize' value={formState.machineSize} onChange={handleChange}/>
+        </Form.Group>
+        <Form.Group className='mb-4'>
+          <Form.Label style={{color:'#575F6E'}}>Machine Capacity/Output</Form.Label>
+          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='machineCapacity' value={formState.machineCapacity} onChange={handleChange}/>
+        </Form.Group>
+        <Form.Group className='mb-4'>
+          <Form.Label style={{color:'#575F6E'}}>Working time</Form.Label>
+          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='workingTime' value={formState.workingTime} onChange={handleChange}/>
+        </Form.Group>
          <Form.Group className='mb-4'>
-          <Form.Label style={{color:'#575F6E'}}>Drying Tray Size</Form.Label>
-          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
+          <Form.Label style={{color:'#575F6E'}}> Tray Size and Quantity (if applicable)</Form.Label>
+          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='traySize' value={formState.traySize} onChange={handleChange}/>
         </Form.Group>
-        <Form.Group className='mb-4'>
-          <Form.Label style={{color:'#575F6E'}}>Voltage</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
-        </Form.Group>
-        
-        <Form.Group className='mb-4'>
-          <Form.Label style={{color:'#575F6E'}}>Price</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} onChange={(event) => {
-                  const numericValue = event.target.value.replace(/\D/g, "");
-                  
-                }}/>
-        </Form.Group>
+       
+       
         </>
 
       );
       case 2:
+        return (
+          <>
+          <div className='mb-4'>
+          <h2 className=''style={{fontFamily:'Outfit'}}>Machine</h2>
+         
+        </div>
+      
+          
+          <Form.Group className='mb-4'>
+            <Form.Label style={{color:'#242426'}}>Temperature</Form.Label>
+            <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='temperature' value={formState.temperature} onChange={handleChange}/>
+          </Form.Group>
+          <Form.Group className='mb-4'>
+            <Form.Label style={{color:'#575F6E'}}>Model</Form.Label>
+            <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='model' value={formState.model} onChange={handleChange}/>
+          </Form.Group>
+          <Form.Group className='mb-4'>
+            <Form.Label style={{color:'#575F6E'}}>List other features</Form.Label>
+            <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='features' value={formState.features} onChange={handleChange} />
+          </Form.Group>
+          <Form.Group className='mb-4'>
+            <Form.Label style={{color:'#242426'}}>Price</Form.Label>
+            <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='price' value={formState.price} onChange={handleChange}/>
+          </Form.Group>
+          </>
+  
+        );
+       
+      case 3:
       return (
         <>
         <div className='mb-4'>
@@ -118,24 +150,51 @@ const StepContent = ({ step, formState, setFormState }) => {
       </div>
          <Form.Group className='mb-4'>
           <Form.Label style={{color:'#575F6E'}}>Name</Form.Label>
-          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}/>
+          <Form.Control type='text' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='name' value={formState.name} onChange={handleChange}/>
+        </Form.Group>
+        <Form.Group className='mb-4'>
+          <Form.Label style={{color:'#575F6E'}}>Email address</Form.Label>
+          <Form.Control type='email' style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='email' value={formState.email} onChange={handleChange}/>
         </Form.Group>
         <Form.Group className='mb-4'>
           <Form.Label style={{color:'#575F6E'}}>Phone Number</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}  onChange={(event) => {
-                  const numericValue = event.target.value.replace(/\D/g, "");
-                  
-                }}/>
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}}  
+                 name='phoneNumber' value={formState.phoneNumber} onChange={handleChange} 
+          />
         </Form.Group>
         
         <Form.Group className='mb-4'>
           <Form.Label style={{color:'#575F6E'}}>Location of Machine</Form.Label>
-          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} />
+          <Form.Control type='text' required style={{borderTop:'none', borderLeft:'none', borderRight:'none', borderRadius:'0px'}} name='location' value={formState.location} onChange={handleChange}/>
         </Form.Group>
         <h6 style={{color:'#575F6E'}}>By clicking submit, you agree to our terms and conditions</h6>
         </>
       );
-  
+      case 4:
+        return (
+          <>
+           <div>Review your information</div>
+        <p>1. produe list:{formState.produceList}</p>
+        <p>2. machineName: {formState.machineName}</p>
+        <p>3. processingCategory:{formState.processingCategory}</p>
+        <p>4. powerSpecifications:{formState.powerSpecifications}</p>
+        <p>5. voltage:{formState.voltage}</p>
+        <p>6. machineSize:{formState.machineSize}</p>
+        <p>7. machineCapacity:{formState.machineCapacity}</p>
+        <p>8. workingTime:{formState.workingTime}</p>
+        <p>9. traySize:{formState.traySize}</p>
+        <p>10. temperature:{formState.temperature}</p>
+        <p>11. model:{formState.model}</p>
+        <p>12. features:{formState.features}</p>
+        <p>13. price:{formState.price}</p>
+        <p>14. name:{formState.name}</p>
+        <p>15. phoneNumber:{formState.phoneNumber}</p>
+        <p>16. email:{formState.email}</p>
+        <p>17. location:{formState.location}</p>
+        </>
+       
+        );
+     
     default:
       return 'Unknown step';
   }
@@ -145,8 +204,23 @@ const MachineryForm = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const [formState, setFormState] = React.useState({
-    produceName: '',
-    weight: '',
+    produceList: '',
+    machineName: '',
+    processingCategory:'',
+    powerSpecifications:'',
+    voltage:'',
+    machineSize:'',
+    machineCapacity:'',
+    workingTime:'',
+    traySize:'',
+    temperature:'',
+    model:'',
+    features:'',
+    price:'',
+    name:'',
+    phoneNumber:'',
+    email:'',
+    location:'',
   });
 
   const handleNext = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -154,30 +228,6 @@ const MachineryForm = () => {
   const handleSubmit =  () => {
     console.log('Submitting:', formState.name, formState.email); // Debug log
   }
-//   const handleSubmit = async () => {
-//     console.log('Submitting:', formState.name, formState.email); // Debug log
-  
-//     const formActionURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScmAbgMXdYTxGlnbEE5OYWdknC0IDg4FNi_NpLdOpkVhB6R7A/formResponse';
-//     const nameEntryId = 'entry.233741404';
-//     const emailEntryId = 'entry.304421428';
-  
-//     const formData = new FormData();
-//     formData.append(nameEntryId, formState.name);
-//     formData.append(emailEntryId, formState.email);
-  
-//     try {
-//       const response = await fetch(formActionURL, {
-//         method: 'POST',
-//         mode: 'no-cors',
-//         body: formData,
-//       });
-  
-//       console.log('Form submitted successfully.');
-//     } catch (error) {
-//       console.error('Form submission error:', error);
-//     }
-//   };
- 
 
   return (
     <div><GuestNavbar/>

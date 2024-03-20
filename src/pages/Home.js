@@ -72,7 +72,7 @@ const Home = () => {
     <div>
       <GuestNavbar/>
      
-      <div className='px-3 px-md-5 mx-lg-4'>
+     
         <section className='my-3 my-md-5'>
         <Carousel data-bs-theme="dark" className='home-section'>
         {carouselHero.map((item)=>(
@@ -99,8 +99,8 @@ const Home = () => {
       
          
         </section>
-       
-        <section className='my-3 my-md-5 px-lg-5'>
+        <div className='px-3 px-md-5 mx-lg-4'>
+        <section className='my-3 my-md-5'>
         <h2 className='mb-4'>Locations where our listed machines are</h2>
         <div className=''>
         <LoadScript
@@ -118,7 +118,7 @@ const Home = () => {
         </div>
         
         </section>
-        <section className="my-3 my-md-5 py-5 px-lg-5">
+        <section className="my-3 my-md-5 py-5">
           <Card className="border-0">
             <Card.Img src={hero2} alt="hero1" style={{ height: "345px" }} />
 

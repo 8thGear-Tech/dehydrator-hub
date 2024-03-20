@@ -171,9 +171,9 @@ const Services = () => {
             <Col xs={12} md={6} key={product.id} className=' mb-4 mb-md-3'>
               <Card style={{borderRadius:'16px', border:'1px solid #DEE2E7'}} className='h-100 px-3 pt-3 pb-4'>
                 <Row className=''>
-                <Col xs={6} >
-                  <Card className='p-2 align-items-center justify-content-center h-100' style={{borderRadius:'6px', border:'1px solid #DEE2E7'}}>
-                  <Card.Img src={product.productImage} />
+                <Col xs={6} className='h-100'>
+                  <Card className='p-2  h-100' style={{borderRadius:'6px', border:'1px solid #DEE2E7'}}>
+                  <Card.Img src={product.productImage} className='h-100' style={{objectFit:'cover'}}/>
                   </Card>
                  
                 </Col>
