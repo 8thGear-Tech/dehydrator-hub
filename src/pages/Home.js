@@ -268,6 +268,11 @@ const Home = () => {
         <section className="my-3 my-md-5 py-5 px-lg-5">
           <h2 className="my-5">Locations where our listed machines are</h2>
           <div className="">
+            {/* <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1pax2j_ixeoQVPrlEiL58wQBi9KyXDxo&ehbc=2E312F"
+              width="640"
+              height="480"
+            ></iframe> */}
             <LoadScript
               googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
             >
@@ -276,9 +281,7 @@ const Home = () => {
                 center={center}
                 zoom={6}
                 options={options}
-              >
-                {/* Child components, like markers, info windows, etc. */}
-              </GoogleMap>
+              ></GoogleMap>
             </LoadScript>
           </div>
         </section>
