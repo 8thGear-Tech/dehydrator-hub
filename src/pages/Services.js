@@ -69,7 +69,7 @@ const Services = () => {
           </Row>
          
         </section>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example " tabindex="0">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" className="scrollspy-example " tabIndex="0">
         <div>
         <h2>Produce we process</h2>
        
