@@ -7,6 +7,8 @@
 @use "./Faq/faq" as *;
 @use "./Home/Home" as *;
 
+@use "././Services/Services" as *;
+
 /* CSS */
 .dropdown-item {
   color: #000000 !important; /* Black text color */

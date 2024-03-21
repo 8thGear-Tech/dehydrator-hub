@@ -45,10 +45,12 @@ const Contact = () => {
           <div className="col-12 col-md-4 d-flex flex-column gap-3 border-line pe-lg-5 pb-4 pb-md-0">
             <h6>Follow us</h6>
             <div className="d-flex align-items-end gap-3 pe-lg-5">
-              <i className="bi bi-facebook px-1 social-icon"></i>
-              <i className="bi bi-instagram px-1 social-icon"></i>
-              <i className="bi bi-twitter px-1 social-icon"></i>
-              <i className="bi bi-linkedin px-1 social-icon"></i>
+            <a href="https://www.facebook.com/p/fooddehydratorng-100037323050125/" className="text-decoration-none text-dark social-icon">
+          <i className="bi bi-facebook px-1 "></i>
+          </a>
+          <a href="https://www.instagram.com/food.dehydrator.ng/" className="text-decoration-none text-dark social-icon"><i className="bi bi-instagram px-1 "></i></a> 
+          <a href="https://x.com/DehydratorHub?t=DQVIm13KGZebctSef9z1Kg&s=08" className="text-decoration-none text-dark social-icon"><i className="bi bi-twitter px-1 "></i></a> 
+          <a href="https://www.linkedin.com/company/dehydratorhub/" className="text-decoration-none text-dark social-icon"><i className="bi bi-linkedin px-1 "></i></a> 
             </div>
           </div>
 
@@ -57,7 +59,9 @@ const Contact = () => {
               {" "}
               <FaPhoneVolume />{" "}
               <h5 style={{ fontWeight: "300" }} className="pe-lg-5">
-                08085554485
+              <a href="tel:08085554485" className="text-dark text-decoration-none">
+            08085554485
+          </a>
               </h5>
             </div>
           </div>

@@ -14,7 +14,7 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import Footer from "../components/Footer";
 import SidebarNavbar from "../components/Navbar/SideNavbar";
 import { ServicesNavbar } from "../components/Navbar/SideNavbar";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
@@ -67,18 +67,9 @@ const Services = () => {
                 <Card.ImgOverlay className="px-3 py-5 px-md-5">
                   <h3>Lets process your produce and</h3>
                   <h1>convert them into valuable products</h1>
-                  <Button
-                    variant="light"
-                    className="my-4 px-3"
-                    style={{ backgroundColor: "#fff" }}
-                  >
-                    <Link
-                      to="/about-us"
-                      className="text-decoration-none"
-                      style={{ color: "#000" }}
-                    >
-                      Learn more
-                    </Link>
+                  <Button variant="light" className="my-4 px-3">
+                    {" "}
+                    Learn more
                   </Button>
                 </Card.ImgOverlay>
               </Card>
@@ -90,8 +81,8 @@ const Services = () => {
           data-bs-target="#navbar-example2"
           data-bs-root-margin="0px 0px -40%"
           data-bs-smooth-scroll="true"
-          class="scrollspy-example "
-          tabindex="0"
+          className="scrollspy-example "
+          tabIndex="0"
         >
           <div>
             <h2>Produce we process</h2>

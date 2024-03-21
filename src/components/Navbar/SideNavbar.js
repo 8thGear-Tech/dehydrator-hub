@@ -57,40 +57,20 @@ export const ServicesNavbar = () => {
   };
 
   return (
-    <Navbar className="px-3 px-md-5 py-1 py-3">
-      <Nav className="d-flex align-items-center">
-        {width < breakpoints.md && (
-          <button
-            className="btn btn-secondary"
-            onClick={handlePrevClick}
-            disabled={activeGroupIndex === 0}
-          >
-            &lt;
-          </button>
-        )}
-        <div className="navbar-nav flex-row overflow-auto">
-          {linkGroups[activeGroupIndex] &&
-            linkGroups[activeGroupIndex].map((link) => (
-              <Nav.Link
-                href={link.url}
-                className="nav-link text-dark"
-                key={link.id}
-              >
-                {link.title}
-              </Nav.Link>
-            ))}
-        </div>
-        {width < breakpoints.md && (
-          <button
-            className="btn btn-secondary"
-            onClick={handleNextClick}
-            disabled={activeGroupIndex === linkGroups.length - 1}
-          >
-            &gt;
-          </button>
-        )}
-      </Nav>
-    </Navbar>
+   
+       <div className=" category-container p-3" id="navbar-example2" >
+        <Nav.Link className='nav-link' >Services</Nav.Link>
+        <Nav.Link href="#scrollspyHeading1"className='nav-link'>Prepping</Nav.Link>
+        <Nav.Link href="#scrollspyHeading1" className='nav-link'>Milling</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading2" className='nav-link'>Dehydration</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading3" className='nav-link'>Oil Extraction</Nav.Link>
+        <Nav.Link  href="#scrollspyHeading4" className='nav-link'>Packaging</Nav.Link>
+        <Nav.Link  className='nav-link'>Repairs</Nav.Link>
+        <Nav.Link  className='nav-link'>Training & certifications</Nav.Link>
+       
+       
+    </div>
+  
   );
 };
 
