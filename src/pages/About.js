@@ -184,18 +184,18 @@ const About = () => {
         <section style={{ backgroundColor: "#F5F5F5" }} className="mb-5 p-md-5">
           <Row className="px-lg-5">
             <Col xs={12} md={5} className="mb-3">
-              <Image fluid src={hero2} alt="" className="h-100" />
+              <Image fluid src={hero2} alt="" className="h-100" style={{objectFit:'cover'}} />
             </Col>
             <Col xs={12} md={7} className="mb-3">
               <div
-                className="d-flex flex-column gap-2 ps-md-4 "
-                style={{ maxWidth: "34rem" }}
+                className="d-flex flex-column gap-2 ps-lg-5 pe-lg-4 ps-3 pe-3"
+                style={{ maxWidth: "" }}
               >
                 <h6 style={{ fontWeight: "500", color: "#81AC29" }}>
                   About us
                 </h6>
 
-                <h6 style={{ lineHeight: "22px" }}>
+                <h6 style={{ lineHeight: "32px" }}>
                   Dehydrator Hub is a vital solution addressing post-harvest
                   loss in Nigeria's agriculture space by connecting producers
                   with processors and processing machinery. By facilitating this
